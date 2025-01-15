@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.module.css";
+import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <header className="header">
-      <nav className="nav">
-        <Link to="/" className="nav-link">
+    <header className={styles["header"]}>
+      <nav className={styles["nav"]}>
+        <Link to="/" className={styles["nav-item"]}>
           Home
         </Link>
-        <Link to="/about" className="nav-link">
+        <Link to="/about" className={styles["nav-item"]}>
           About
         </Link>
-        <Link to="/products" className="nav-link">
+        <Link to="/products" className={styles["nav-item"]}>
           Products
         </Link>
-        <Link to="/contacts" className="nav-link">
+        <Link to="/contacts" className={styles["nav-item"]}>
           Contacts
         </Link>
       </nav>
