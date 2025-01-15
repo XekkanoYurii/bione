@@ -2,6 +2,7 @@
   display: flex;
   text-align: center;
   align-items: center;
+  background-color: rgb(149, 143, 143);
 }
 .nav {
   display: flex;
@@ -10,4 +11,13 @@
   margin-right: auto;
 }
 .nav-item {
+  position: relative;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+
+  display: block;
 }
