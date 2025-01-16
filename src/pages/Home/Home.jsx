@@ -3,9 +3,14 @@ import styles from "./Home.module.css"; // Імпорт стилів як об'�
 
 function Home() {
   return (
-    <section className={styles["hero-section"]}>
-      <div className={styles["hero-container"]}>
-        <h1 className={styles["hero-title"]}>Welcome to the Home Page</h1>
+    <section className={styles[""]}>
+      <div className={styles[""]}>
+        <div className={styles["hero-container"]}>
+          <h1 className={styles["hero-title"]}>
+            Welcome to <span className={styles["hero-title-span"]}>AI</span>{" "}
+            world
+          </h1>
+        </div>
         <div className={styles[""]}>
           <h2 className={styles[""]}>Hohohooohoh</h2>
           <ul className={styles.list[""]}>
