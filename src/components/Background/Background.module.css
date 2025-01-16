@@ -1,0 +1,11 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Зробити фон позаду контенту */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../ImagesComponents/background/background.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* Фіксований бекграунд */
+}

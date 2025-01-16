@@ -1,0 +1,70 @@
+/* .hero-section {
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 15px; 
+  padding: 20px 30px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+} */
+
+/* HERO-CONTAINER */
+.hero-container {
+  width: 90%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Темний напівпрозорий фон */
+  border-radius: 15px; /* Закруглені кути */
+  padding: 20px 30px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для створення об'єму */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анімація */
+}
+.hero-container:hover {
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5); /* Зелена підсвітка */
+  transform: scale(1.02); /* Легке збільшення */
+}
+/* HERO_TITLE */
+.hero-title {
+  font-size: 2.5rem;
+  color: white;
+  padding: 100px 0;
+}
+
+.hero-title-span {
+  color: #00ff00; /* Кислотно-зелений для слова "AI" */
+  text-shadow: 0 0 8px #00ff00;
+}
+/* advantages-переваги */
+.content {
+  margin-top: 20px;
+}
+.sub-title {
+  font-size: 1.8rem;
+  color: #ccc;
+  text-align: center;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.list-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+.list-item:hover {
+  background-color: rgba(0, 255, 0, 0.2); /* Підсвічування при наведенні */
+}
+.item-title {
+  font-size: 1.2rem;
+  color: #00ff00;
+}
+.item-description {
+  font-size: 1rem;
+  color: white;
+}

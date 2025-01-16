@@ -1,4 +1,5 @@
 import React from "react";
+import NavigationButton from "../NavigationButton/NavigationButton";
 import "./About.module.css";
 
 function About() {
@@ -9,6 +10,8 @@ function About() {
       <ul>
         <li className="li">Home</li>
       </ul>
+      <NavigationButton direction="left" to="/" />
+      <NavigationButton direction="right" to="/products" />
     </section>
   );
 }
