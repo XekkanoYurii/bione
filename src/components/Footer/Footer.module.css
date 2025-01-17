@@ -1,18 +1,15 @@
 /* Загальний стиль футера */
 .wrapper {
-  background-color: #1a1a1a;
-  color: #d1d1d1;
+  background-color: rgba(0, 0, 0, 0.4);
   font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
-
 .footer {
   padding: 20px;
 }
-
 .topSection {
   display: flex;
-  text-align: start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /*link List */
 .linksSection {
@@ -20,34 +17,117 @@
   gap: 50px;
   margin-left: 20px;
 }
-
-.title {
-  color: #0aff0a;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.list-div {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .list {
-  list-style: none;
-  border-top: 1px solid #555;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: wrap;
+  gap: 10px;
+  border: 2px solid #00c3c6; /* Рамка для ul */
+  border-radius: 15px; /* Закруглені краї */
+  padding: 20px; /* Внутрішній відступ */
+  background-color: rgba(0, 0, 0, 0.6); /* Темний фон */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Легка тінь */
 }
 
 .listItem {
-  margin-bottom: 5px;
+  width: 40px;
+  border: 3px solid #00c3c6; /* Рамка для ul */
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #00c3c6;
 }
-
+/* Ефект нахилу при наведенні */
+.list:hover {
+  transform: rotateX(5deg) rotateY(5deg); /* Нахил при наведенні */
+  box-shadow: 0 8px 16px rgba(3, 255, 255, 0.6); /* Яскравіша тінь */
+  background-color: rgba(0, 0, 0, 0.8); /* Трохи темніший фон */
+}
 .listItem a {
-  color: #d1d1d1;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
-.listItem a:hover {
-  color: #0aff0a;
+/* ________________________ */
+.image-icon {
+  border-radius: 10%; /* Круглі іконки */
+  transition: transform 0 0.3s ease, box-shadow 0.3s ease; /* Анімація */
 }
+.image-icon img {
+  border-radius: 50%; /* Злегка закруглені кути */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  filter: grayscale(100%); /* Іконки чорно-білі за замовчуванням */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 36px; /* Фіксована ширина */
+  height: 36px; /* Фіксована висота */
+  transition: box-shadow 0.3s ease;
+}
+.image-icon img:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+  filter: grayscale(0); /* Повернення кольору при наведенні */
+  transform: scale(1.2); /* Легке збільшення */
+  background-color: #00f9ff; /* Зелений фон при наведенні */
+  transform: scale(1.1); /* Збільшення при наведенні */
+  box-shadow: 1px 1px 20px 4px #00f9ff; /* Сильніша тінь при наведенні */
+}
+/* --------------------------------- */
+
 /* FORM */
+/* Стиль для кнопки з анімацією */
+
+/* Стиль для форми */
+.formSection {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.title {
+  color: #00fbff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.textarea {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #00c3c6;
+  outline: none;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #00c3c6;
+  color: #1a1a1a;
+  border-radius: 5px;
+  border: 1px solid #54fcff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00fbff;
+  box-shadow: 0 4px 15px #00f1f5;
+}
+
+/*  */
+
 .formSection {
   margin-right: 20px;
 }
@@ -68,22 +148,37 @@
 }
 
 .input:focus {
-  border-color: #0aff0a;
+  border-color: #00fbff;
   outline: none;
 }
 
 .button {
   padding: 10px 15px;
-  background-color: #0aff0a;
+  background-color: #00fbff;
   color: #1a1a1a;
-  border: none;
   border-radius: 5px;
+  border: 1px solid #54fcff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0dcc0d;
+  background-color: #00fbff;
+}
+/* Стиль для текстового поля */
+.textarea {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #fff;
+  resize: none; /* Заборона зміни розміру */
+  font-family: Arial, sans-serif; /* Основний шрифт */
+}
+
+.textarea:focus {
+  border-color: #00c3c6;
+  outline: none;
 }
 /* POLICY */
 .bottomSection {
@@ -95,10 +190,13 @@
 }
 
 .bottomSection a {
-  color: #0aff0a;
+  color: #00b5b8;
   text-decoration: none;
 }
 
 .bottomSection a:hover {
   text-decoration: underline;
+}
+.p {
+  color: #fff;
 }

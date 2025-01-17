@@ -6,7 +6,7 @@
   border-radius: 50%;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: #00ff00;
+  background-color: #00fbff;
   color: black;
   border: none;
   display: flex;
@@ -19,7 +19,7 @@
 .nav-button:hover {
   background-color: black;
   color: #00ff00;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
 }
 
 .left {

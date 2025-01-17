@@ -1,8 +1,13 @@
 .advantages-section {
   padding: 40px;
-  background-color: #1a1a1a;
   color: white;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
@@ -15,30 +20,28 @@
 .advantages-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Усе в один рядок */
   justify-content: space-between;
   gap: 20px;
   padding: 0;
+  overflow-x: auto; /* Прокручування по горизонталі */
 }
 
 .advantage-item {
-  flex: 1 1 calc(45% - 20px);
-  min-width: 300px;
+  flex: 1 1 300px; /* Ширина кожного елемента */
+  min-width: 250px; /* Мінімальна ширина */
   padding: 20px;
-  border: 2px solid #00ff00;
+  border: 2px solid #009fa2;
   border-radius: 10px;
   position: relative;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
+  overflow: hidden; /* Ховаємо частини елементів, що виходять за межі */
 }
 
 .advantage-item:hover {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-  border-color: #00ff00;
-}
-
-.expanded .advantage-full-text {
-  margin-top: 10px;
+  border-color: #00f1f5;
 }
 
 .advantage-title {
@@ -53,25 +56,14 @@
   color: #aaa;
 }
 
-.advantage-full-text {
+.expanded-content {
+  display: none; /* Ховаємо текст за замовчуванням */
   font-size: 1rem;
   margin-top: 10px;
   color: white;
+  transition: all 0.3s ease;
 }
 
-.toggle-button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #00ff00;
-  color: black;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.toggle-button:hover {
-  background-color: black;
-  color: #00ff00;
+.advantage-item:hover .expanded-content {
+  display: block; /* Показуємо текст тільки при ховері на конкретний елемент */
 }
