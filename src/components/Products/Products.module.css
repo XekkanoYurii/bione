@@ -1,0 +1,86 @@
+.products {
+  padding: 20px;
+  background: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  color: #0ff; /* Неоновий стиль */
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  background: rgba(0, 255, 255, 0.1);
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #0ff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.listItem:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.listTitle {
+  font-size: 1.5rem;
+  color: #0ff;
+  margin: 0;
+}
+
+.sublist {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.sublistItem {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.link {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.image {
+  max-width: 60px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #0ff;
+}
+
+.subDescription {
+  font-size: 0.9rem;
+  color: #aaa;
+}

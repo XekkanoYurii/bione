@@ -1,0 +1,68 @@
+/* === Reset === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* === HTML & Body === */
+html {
+  font-size: 16px;
+  font-family: "Arial", sans-serif; /* Основний шрифт */
+}
+body {
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif; /* Основний шрифт */
+}
+/* === Заголовки === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif; /* Шрифт для заголовків */
+  margin: 0;
+  padding: 0;
+}
+/* === Параграфи === */
+p {
+  margin: 0;
+  padding: 0;
+}
+/* === Списки === */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* === Фото === */
+img {
+  display: block;
+}
+/* === Посилання === */
+a {
+  text-decoration: none;
+  color: inherit; /* Зберігає поточний колір тексту */
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #00ffcc; /* Зміна кольору при наведенні */
+}
+/*  */
+h2 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}

@@ -1,3 +1,104 @@
-.ul {
-  background-color: red;
+/* Загальний стиль футера */
+.wrapper {
+  background-color: #1a1a1a;
+  color: #d1d1d1;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.topSection {
+  display: flex;
+  text-align: start;
+  justify-content: space-between;
+}
+/*link List */
+.linksSection {
+  display: flex;
+  gap: 50px;
+  margin-left: 20px;
+}
+
+.title {
+  color: #0aff0a;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style: none;
+  border-top: 1px solid #555;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin-bottom: 5px;
+}
+
+.listItem a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.listItem a:hover {
+  color: #0aff0a;
+}
+/* FORM */
+.formSection {
+  margin-right: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.input:focus {
+  border-color: #0aff0a;
+  outline: none;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #0aff0a;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0dcc0d;
+}
+/* POLICY */
+.bottomSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.bottomSection a {
+  color: #0aff0a;
+  text-decoration: none;
+}
+
+.bottomSection a:hover {
+  text-decoration: underline;
 }
