@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom"; // Додаємо useLocation
 import logo from "../ImagesComponents/logo.svg";
 import styles from "./Header.module.css";

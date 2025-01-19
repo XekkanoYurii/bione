@@ -1,0 +1,108 @@
+/* Основний стиль для галереї */
+.gallery-section {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gallery-title {
+  font-size: 2rem;
+  color: #00ff00;
+  margin-bottom: 45px;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+  transform: scale(1.75); /* Збільшення фотографії на 7% при наведенні */
+}
+.gallery-image {
+  width: 80px;
+  height: 100px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Плавний ефект при швидкому переміщенні миші */
+}
+/* Стилі для модального вікна */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1);
+  background: rgba(0, 0, 0, 0.7); /* Чорний напівпрозорий фон */
+}
+/* Стиль контенту в модальному вікні */
+.modal-content {
+  position: relative;
+  max-width: 1100px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out; /* Плавний ефект для трансформації */
+}
+/* 3D ефект для модального контенту */
+.modal-content:hover {
+  transform: scale(1.01); /* Збільшуємо на 5% для ефекту глибини */
+}
+/* Стиль для зображення в модальному вікні */
+.modal-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.9);
+}
+/*  */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #00ff00;
+  cursor: pointer;
+}
+.modal-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.prev-btn,
+.next-btn {
+  background-color: black;
+  color: white;
+  border: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #00f1f5;
+}
+.modal:focus {
+  outline: none;
+}
+/* Мобільна адаптація для зображень */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 48%;
+  }
+}

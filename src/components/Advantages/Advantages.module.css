@@ -6,8 +6,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 90%;
   border-radius: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -19,51 +18,46 @@
 
 .advantages-list {
   list-style: none;
-  display: flex;
-  flex-wrap: nowrap; /* Усе в один рядок */
-  justify-content: space-between;
-  gap: 20px;
+  display: flex; /* В один рядок */
+  justify-content: space-between; /* Рівномірний розподіл */
+  gap: 20px; /* Проміжки між елементами */
   padding: 0;
-  overflow-x: auto; /* Прокручування по горизонталі */
 }
 
 .advantage-item {
-  flex: 1 1 300px; /* Ширина кожного елемента */
-  min-width: 250px; /* Мінімальна ширина */
+  flex: 1 1 22%; /* Встановлюємо ширину для кожного елемента */
+  min-width: 250px;
   padding: 20px;
   border: 2px solid #009fa2;
   border-radius: 10px;
-  position: relative;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
-  overflow: hidden; /* Ховаємо частини елементів, що виходять за межі */
+  background-color: rgba(0, 0, 0, 0.7); /* Темний фон */
+  overflow: hidden;
+  text-align: center;
 }
 
 .advantage-item:hover {
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
   border-color: #00f1f5;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Світіння рамки */
 }
 
 .advantage-title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.advantage-short-text {
-  font-size: 1rem;
   margin-bottom: 10px;
-  color: #aaa;
 }
 
-.expanded-content {
-  display: none; /* Ховаємо текст за замовчуванням */
+.advantage-full-text {
   font-size: 1rem;
-  margin-top: 10px;
   color: white;
-  transition: all 0.3s ease;
+  display: none; /* Текст приховано за замовчуванням */
+  margin-top: 10px;
+  transition: opacity 0.3s ease; /* Плавна поява */
+  opacity: 0; /* Невидимий стан */
 }
 
-.advantage-item:hover .expanded-content {
-  display: block; /* Показуємо текст тільки при ховері на конкретний елемент */
+.advantage-full-text.visible {
+  display: block; /* Показуємо текст */
+  opacity: 1; /* Робимо видимим */
 }

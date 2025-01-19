@@ -1,7 +1,7 @@
-import React from "react";
 import Advantages from "../Advantages/Advantages";
+import GalleryHero from "../GalleryHero/GalleryHero";
 import NavigationButton from "../NavigationButton/NavigationButton";
-import styles from "./Home.module.css"; // Імпорт стилів як об'єкта "styles"
+import styles from "./Home.module.css";
 
 function Home() {
   return (
@@ -33,6 +33,7 @@ function Home() {
           </li>
         </ul>
       </div>
+      <GalleryHero />
       <NavigationButton direction="right" to="/about" />
     </section>
   );
