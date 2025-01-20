@@ -58,7 +58,9 @@ function Gallery() {
 
   return (
     <section className={styles["gallery-section"]}>
-      <h2 className={styles["gallery-title"]}>Explore AI Technology</h2>
+      <h2 className={styles["gallery-title"]}>
+        Explore <span>AI</span> Technology
+      </h2>
       <div className={styles["gallery-container"]}>
         {images.map((image, index) => (
           <div

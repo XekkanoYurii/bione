@@ -8,8 +8,11 @@
 }
 .gallery-title {
   font-size: 2rem;
-  color: #00ff00;
+  color: aliceblue;
   margin-bottom: 45px;
+}
+span {
+  color: #00ff00;
 }
 .gallery-container {
   display: flex;
@@ -19,22 +22,26 @@
 }
 .gallery-item {
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease; /* Плавніша анімація */
+  perspective: 1000px; /* Додаємо 3D ефект */
 }
 .gallery-item:hover {
-  transform: scale(1.75); /* Збільшення фотографії на 7% при наведенні */
+  transform: scale(1.1) rotate3d(1, 1, 0, 10deg); /* Збільшення і легке обертання */
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.4); /* Тінь стає більш виразною */
 }
+
 .gallery-image {
   width: 100px;
   height: 140px;
   border-radius: 10px;
-
-  box-shadow: 0 4px 15px #00f1f5; /* Зелена підсвітка */
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 241, 245, 0.5); /* Початкова підсвітка */
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Плавніша зміна тіні */
 }
 .gallery-item:hover .gallery-image {
-  transform: scale(1.1); /* Плавний ефект при швидкому переміщенні миші */
+  transform: scale(1.2); /* Більш виразне збільшення */
+  box-shadow: 0 8px 30px rgba(0, 255, 0, 0.6); /* Яскравіша і більша тінь */
 }
+
 /* Стилі для модального вікна */
 .modal {
   display: flex;

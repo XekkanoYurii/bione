@@ -29,7 +29,9 @@ function Advantages() {
 
   return (
     <section className={styles["advantages-section"]}>
-      <h2 className={styles["section-title"]}>Why Choose AI?</h2>
+      <h2 className={styles["section-title"]}>
+        Why Choose <span>AI</span>?
+      </h2>
       <ul className={styles["advantages-list"]}>
         {advantages.map((adv, index) => (
           <li
