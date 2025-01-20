@@ -25,9 +25,11 @@
   transform: scale(1.75); /* Збільшення фотографії на 7% при наведенні */
 }
 .gallery-image {
-  width: 80px;
-  height: 100px;
+  width: 100px;
+  height: 140px;
   border-radius: 10px;
+
+  box-shadow: 0 4px 15px #00f1f5; /* Зелена підсвітка */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .gallery-item:hover .gallery-image {
@@ -68,13 +70,28 @@
 /*  */
 .close-btn {
   position: absolute;
+
+  margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+
+  text-align: center;
+  justify-content: center;
   top: 10px;
   right: 10px;
   font-size: 2rem;
-  background: none;
-  border: none;
-  color: #00ff00;
+  background: black;
+  color: #00babd;
   cursor: pointer;
+}
+.close-btn:hover {
+  background-color: #00f1f5;
+  color: black;
 }
 .modal-controls {
   position: absolute;
