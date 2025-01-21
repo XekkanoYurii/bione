@@ -11,9 +11,6 @@
   overflow: hidden; /* Ховаємо все, що виходить за межі контейнера */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Анімація для інтерактивності */
 }
-/* WECLOME */
-.welcome-section {
-}
 /* Ефект пульсації */
 .hero-container::before {
   content: ""; /* Додаємо псевдоелемент */

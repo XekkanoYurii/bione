@@ -1,4 +1,5 @@
 import Welcome from "../Welcome/Welcome";
+import SwimWindow from "../SwimWindow/SwimWindow";
 import Advantages from "../Advantages/Advantages";
 import GalleryHero from "../GalleryHero/GalleryHero";
 import NavigationButton from "../NavigationButton/NavigationButton";
@@ -9,6 +10,7 @@ function Home() {
   return (
     <section className={styles["hero-section"]}>
       <Welcome />
+      <SwimWindow />
       <div className={styles["animated-background"]}></div>
       <div className={styles["welcome-section"]}></div>
       <div className={styles["hero-container"]}>

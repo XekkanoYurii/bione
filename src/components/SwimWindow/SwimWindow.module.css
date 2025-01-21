@@ -1,0 +1,61 @@
+/* swim-window.module.css */
+.swim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Тінь під віконцем */
+  z-index: 1000; /* Поверх всього */
+  display: flex;
+  justify-content: flex-end; /* Показуємо вікно справа */
+  align-items: center;
+  overflow: hidden; /* Заборона прокрутки вмісту */
+}
+
+.swim-window {
+  position: relative;
+  width: 50%; /* Ширина спливаючого вікна */
+  max-width: 400px; /* Максимальна ширина */
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Початкове положення — за межами екрана */
+  transition: transform 0.5s ease-in-out; /* Анімація появи */
+}
+
+.swim-window.active {
+  transform: translateX(0); /* Переміщення до центру екрану */
+}
+
+.swim-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.swim-content {
+  text-align: center;
+}
+
+.swim-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.swim-button:hover {
+  background-color: #0056b3;
+}
