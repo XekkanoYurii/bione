@@ -1,0 +1,22 @@
+/* welcome-section.module.css */
+.welcome-section {
+  /* Розтягнення на всю ширину і висоту вікна перегляду */
+  width: 99vw;
+  height: 95vh;
+
+  /* Центрування вмісту */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Фон */
+  background-image: url("../ImagesComponents/welcome.jpg"); /* Шлях до вашого зображення */
+  background-size: cover; /* Зображення покриває весь блок */
+  background-position: center; /* Центрування зображення */
+  background-repeat: no-repeat;
+
+  /* Додаткові стилі */
+  color: white; /* Білий текст (за необхідності) */
+  text-align: center; /* Центрування тексту */
+  font-size: 2rem; /* Розмір тексту */
+}

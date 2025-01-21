@@ -1,15 +1,17 @@
+import Welcome from "../Welcome/Welcome";
 import Advantages from "../Advantages/Advantages";
 import GalleryHero from "../GalleryHero/GalleryHero";
 import NavigationButton from "../NavigationButton/NavigationButton";
+
 import styles from "./Home.module.css";
 
 function Home() {
   return (
     <section className={styles["hero-section"]}>
-      {/* Анімований фон */}
+      <Welcome />
       <div className={styles["animated-background"]}></div>
+      <div className={styles["welcome-section"]}></div>
       <div className={styles["hero-container"]}>
-        {/* Заголовок із текстом */}
         <h1 className={styles["hero-title"]}>
           Open <span className={styles["hero-title-span"]}>AI</span> world
         </h1>
