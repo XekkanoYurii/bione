@@ -1,75 +1,66 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import instagramIcon from "../ImagesComponents/iconsSocial/icons8-instagram.svg";
 import chatgptIcon from "../ImagesComponents/iconsSocial/icons8-chatgpt.svg";
 import telegramIcon from "../ImagesComponents/iconsSocial/telegram.svg";
 import linkedinIcon from "../ImagesComponents/iconsSocial/icons8-linkedin.svg";
 import githubIcon from "../ImagesComponents/iconsSocial/icons8-github.svg";
+
+import FeedbackForm from "../Modal/FeedbackForm";
 import styles from "./Footer.module.css";
 
 function Footer() {
-  // Стейт для відображення/приховування форми
-  const [formVisible, setFormVisible] = useState(false);
+  // Стан для модального вікна
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleButtonClick = () => {
-    setFormVisible(!formVisible); // Перемикаємо видимість форми
+  const handleModalClose = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div className={styles["wrapper"]}>
+      {/* Футер */}
       <footer className={styles["footer"]}>
+        {/* Верхня секція футера */}
         <div className={styles["topSection"]}>
-          {/* Два списки посилань */}
+          {/* Соціальні посилання */}
           <div className={styles["linksSection"]}>
+            {/* Група посилань "Developer of ChatGPT" */}
             <div className={styles["list-div"]}>
-              <h3 className={styles["title"]}>Developer of ChatGPT</h3>
+              <h3 className={styles["title"]}>Developer ChatGPT</h3>
               <ul className={styles["list"]}>
                 <li className={styles["listItem"]}>
                   <a
                     href="https://instagram.com"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={instagramIcon}
-                      alt="instagram icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={instagramIcon} alt="Instagram" />
                   </a>
                 </li>
                 <li className={styles["listItem"]}>
                   <a
                     href="https://openai.com/chatgpt"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={chatgptIcon}
-                      alt="chatgpt icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={chatgptIcon} alt="ChatGPT" />
                   </a>
                 </li>
                 <li className={styles["listItem"]}>
                   <a
                     href="https://t.me"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={telegramIcon}
-                      alt="telegram icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={telegramIcon} alt="Telegram" />
                   </a>
                 </li>
               </ul>
             </div>
+            {/* Група посилань "Web Developer" */}
             <div className={styles["list-div"]}>
               <h3 className={styles["title"]}>Web Developer</h3>
               <ul className={styles["list"]}>
@@ -77,88 +68,40 @@ function Footer() {
                   <a
                     href="https://linkedin.com"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={linkedinIcon}
-                      alt="linkedin icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={linkedinIcon} alt="LinkedIn" />
                   </a>
                 </li>
                 <li className={styles["listItem"]}>
                   <a
                     href="https://github.com"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={githubIcon}
-                      alt="github icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={githubIcon} alt="GitHub" />
                   </a>
                 </li>
                 <li className={styles["listItem"]}>
                   <a
                     href="https://t.me"
                     target="_blank"
-                    className={styles["image-icon"]}
                     rel="noopener noreferrer"
+                    className={styles["image-icon"]}
                   >
-                    <img
-                      src={telegramIcon}
-                      alt="telegram icon"
-                      width={40}
-                      height={40}
-                    />
+                    <img src={telegramIcon} alt="Telegram" />
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-
-          {/* Кнопка з анімацією */}
-          <div className={styles["button-container"]}>
-            {/* Форма, що відкривається по натисканню на кнопку */}
-            <div className={styles["formSection"]}>
-              <form className={styles["form"]}>
-                <h3 className={styles["title"]}>Contact Us</h3>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  className={styles["input"]}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  className={styles["input"]}
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  className={styles["textarea"]}
-                  rows="4"
-                  required
-                ></textarea>
-                <button type="submit" className={styles["button"]}>
-                  Submit
-                </button>
-              </form>
-            </div>
-            )
-          </div>
+          {/* Компонент зворотного зв'язку */}
+          <FeedbackForm />
         </div>
 
-        {/* Нижній розтягнутий блок */}
+        {/* Нижня секція футера */}
         <div className={styles["bottomSection"]}>
           <p className={styles["p"]}>
             © {new Date().getFullYear()} My Multi-Page Site. All rights
@@ -170,6 +113,50 @@ function Footer() {
           </p>
         </div>
       </footer>
+
+      {/* Модальне вікно */}
+      {isModalOpen && (
+        <div className={styles["modalOverlay"]} onClick={handleModalClose}>
+          <div
+            className={styles["modalContent"]}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className={styles["title"]}>Contact Us</h3>
+            <form className={styles["form"]}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className={styles["input"]}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className={styles["input"]}
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className={styles.textarea}
+                rows="4"
+                required
+              ></textarea>
+              <button type="submit" className={styles["button"]}>
+                Submit
+              </button>
+            </form>
+            <button
+              className={styles["closeButton"]}
+              onClick={handleModalClose}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

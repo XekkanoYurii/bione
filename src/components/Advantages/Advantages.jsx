@@ -25,31 +25,25 @@ const advantages = [
 ];
 
 function Advantages() {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Зберігаємо індекс лішки, на яку навели мишу
+  const [isHovered, setIsHovered] = useState(false); // Стан для наведення на весь список
 
   return (
-    <section className={styles["advantages-section"]}>
+    <section
+      className={`${styles["advantages-section"]} ${
+        isHovered ? styles["list-hovered"] : ""
+      }`}
+      onMouseEnter={() => setIsHovered(true)} // Наведення на список
+      onMouseLeave={() => setIsHovered(false)} // Приховуємо стан
+    >
       <h2 className={styles["section-title"]}>
         Why Choose <span>AI</span>?
       </h2>
       <ul className={styles["advantages-list"]}>
         {advantages.map((adv, index) => (
-          <li
-            key={index}
-            className={`${styles["advantage-item"]} ${
-              hoveredIndex === index ? styles["hovered"] : ""
-            }`}
-            onMouseEnter={() => setHoveredIndex(index)} // Встановлюємо активний індекс
-            onMouseLeave={() => setHoveredIndex(null)} // Скидаємо активний індекс
-          >
+          <li key={index} className={styles["advantage-item"]}>
             <div className={styles["content"]}>
               <h3 className={styles["advantage-title"]}>{adv.title}</h3>
-              {/* Показуємо повний текст тільки для активного елемента */}
-              {hoveredIndex === index && (
-                <div className={styles["expanded-content"]}>
-                  <p>{adv.fullText}</p>
-                </div>
-              )}
+              <p className={styles["advantage-full-text"]}>{adv.fullText}</p>
             </div>
           </li>
         ))}

@@ -1,4 +1,3 @@
-/* Загальний стиль футера */
 .wrapper {
   background-color: rgba(0, 0, 0, 0.4);
   font-family: Arial, sans-serif;
@@ -11,38 +10,35 @@
   display: flex;
   justify-content: space-around;
 }
-/*link List */
 .linksSection {
   display: flex;
   gap: 50px;
-  margin-left: 20px;
 }
 .list-div {
-  margin-top: auto;
-  margin-bottom: auto;
+  padding: 10px;
 }
-
 .list {
   display: flex;
-  flex-direction: wrap;
-  gap: 10px;
+  flex-wrap: wrap;
+  width: 150px;
+  justify-content: space-around;
   border: 2px solid #00c3c6; /* Рамка для ul */
   border-radius: 15px; /* Закруглені краї */
-  padding: 20px; /* Внутрішній відступ */
+  padding: 5px; /* Внутрішній відступ */
   background-color: rgba(0, 0, 0, 0.6); /* Темний фон */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Легка тінь */
 }
-
+.title {
+  color: aliceblue;
+  padding-bottom: 10px;
+}
 .listItem {
-  width: 40px;
   border: 3px solid #00c3c6; /* Рамка для ul */
   border-radius: 15px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #00c3c6;
 }
-/* Ефект нахилу при наведенні */
+/*  */
 .list:hover {
   transform: rotateX(5deg) rotateY(5deg); /* Нахил при наведенні */
   box-shadow: 0 8px 16px rgba(3, 255, 255, 0.6); /* Яскравіша тінь */
@@ -74,129 +70,38 @@
   transform: scale(1.1); /* Збільшення при наведенні */
   box-shadow: 1px 1px 20px 4px #00f9ff; /* Сильніша тінь при наведенні */
 }
-/* --------------------------------- */
-
-/* FORM */
-/* Стиль для кнопки з анімацією */
-
-/* Стиль для форми */
-.formSection {
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  opacity: 1;
-}
-.title {
-  color: #00fbff;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.input,
-.textarea {
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-.input:focus,
-.textarea:focus {
-  border-color: #00c3c6;
-  outline: none;
-}
-
-.button {
-  padding: 10px 20px;
-  background-color: #00c3c6;
-  color: #1a1a1a;
-  border-radius: 5px;
-  border: 1px solid #54fcff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #00fbff;
-  box-shadow: 0 4px 15px #00f1f5;
-}
-
 /*  */
-
-.formSection {
-  margin-right: 20px;
-}
-
-.form {
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
   width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-.input {
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-.input:focus {
-  border-color: #00fbff;
-  outline: none;
-}
-
-.button {
-  padding: 10px 15px;
-  background-color: #00fbff;
-  color: #1a1a1a;
-  border-radius: 5px;
-  border: 1px solid #54fcff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #00fbff;
-}
-/* Стиль для текстового поля */
-.textarea {
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #2a2a2a;
-  color: #fff;
-  resize: none; /* Заборона зміни розміру */
-  font-family: Arial, sans-serif; /* Основний шрифт */
-}
-
-.textarea:focus {
-  border-color: #00c3c6;
-  outline: none;
-}
-/* POLICY */
 .bottomSection {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #555;
   text-align: center;
   font-size: 0.9rem;
+  margin-top: 20px;
+  border-top: 1px solid #555;
 }
 
 .bottomSection a {
-  color: #00b5b8;
+  color: #00c3c6;
   text-decoration: none;
 }
 
 .bottomSection a:hover {
   text-decoration: underline;
-}
-.p {
-  color: #fff;
 }

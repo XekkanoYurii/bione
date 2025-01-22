@@ -10,7 +10,7 @@ const SwimWindow = () => {
     if (!hasClosedPopup) {
       const handleScroll = () => {
         const scrollPosition = window.scrollY; // Поточна позиція скролу
-        const triggerPoint = window.innerHeight * 0.65; // Точка появи (1.3 висоти viewport)
+        const triggerPoint = window.innerHeight * 0.55; // Точка появи (1.3 висоти viewport)
 
         if (scrollPosition >= triggerPoint) {
           setIsVisible(true); // Показуємо вікно
