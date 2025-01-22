@@ -16,8 +16,8 @@
   text-align: center;
   font-size: 2rem;
   /* Фон секції */
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/public/image/welcome.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.256), rgba(0, 0, 0, 0.201)),
+    url("/public/image/welcome10px.jpg") center/cover no-repeat;
   background-attachment: fixed; /* Фіксований бекграунд */
 }
 /* Текст зліва */
