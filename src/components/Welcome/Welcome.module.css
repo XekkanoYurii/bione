@@ -17,7 +17,7 @@
   font-size: 2rem;
   /* Фон секції */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../ImagesComponents/Welcome.jpg") center/cover no-repeat;
+    url("/public/image/background.jpg") center/cover no-repeat;
   background-attachment: fixed; /* Фіксований бекграунд */
 }
 /* Текст зліва */
