@@ -1,6 +1,5 @@
 import styles from "./Welcome.module.css";
-
-const WelcomeSection = () => {
+function WelcomeSection() {
   return (
     <div className={styles["welcome-section"]}>
       <div className={styles["text-column-left"]}>
@@ -11,6 +10,6 @@ const WelcomeSection = () => {
       </div>
     </div>
   );
-};
+}
 
 export default WelcomeSection;

@@ -11,10 +11,14 @@
   justify-content: center;
   align-items: center;
   /* Додаткові стилі */
-  position: relative; /* Для правильного позиціонування зображення */
+  position: relative; /* Для правильного позиціонування тексту */
   color: white;
   text-align: center;
   font-size: 2rem;
+  /* Фон секції */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../ImagesComponents/Welcome.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* Фіксований бекграунд */
 }
 /* Текст зліва */
 .text-column-left {
@@ -43,6 +47,7 @@
   border-radius: 15px; /* Закруглені кути */
   box-shadow: 0 0 20px rgb(174, 255, 0); /* Світіння рамки */
 }
+
 /* Текст справа */
 .text-column-right {
   position: absolute;
@@ -69,32 +74,4 @@
   border: 2px solid rgb(174, 255, 0); /* Зелена рамка */
   border-radius: 15px; /* Закруглені кути */
   box-shadow: 0 0 10px rgb(174, 255, 0); /* Світіння рамки */
-}
-/* Псевдоелемент для затемнення */
-.welcome-section::before {
-  content: ""; /* Псевдоелемент */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* Фон зображення */
-  background-image: url("../ImagesComponents/Welcome.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  /* Затемнення */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    var(--overlay-opacity)
-  ); /* Прозорість змінюється */
-  transition: transform 5s ease-in-out, background-color 0.3s ease-in-out;
-  z-index: -1; /* Відправляє фон позаду тексту */
-}
-.welcome-section:hover::before {
-  transform: scale(1.1); /* Збільшення лише фону */
 }
