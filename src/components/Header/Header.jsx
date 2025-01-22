@@ -6,8 +6,8 @@ function Header() {
   const location = useLocation(); // Отримуємо поточний шлях
 
   return (
-    <header className={styles.header}>
-      <Link to="/" className={styles.logo}>
+    <header className={styles["header"]}>
+      <Link to="/" className={styles["logo"]}>
         <img
           src={logo}
           alt="Logo"

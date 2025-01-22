@@ -1,7 +1,7 @@
-/* welcome-section.module.css */
+/* Загальний стиль секції */
 .welcome-section {
   margin-bottom: 120px;
-  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 16px 16px rgb(0, 0, 0);
 
   /* Розміри контейнера */
   width: 99vw;
@@ -20,8 +20,9 @@
   font-size: 2rem;
 }
 
+/* Псевдоелемент для затемнення */
 .welcome-section::before {
-  content: ""; /* Псевдоелемент для фону */
+  content: ""; /* Псевдоелемент */
   position: absolute;
   top: 0;
   left: 0;
@@ -29,14 +30,19 @@
   height: 100%;
 
   /* Фон зображення */
-  background-image: url("../ImagesComponents/welcome.jpg"); /* Шлях до вашого зображення */
+  background-image: url("../ImagesComponents/Welcome.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* Ефект масштабування */
-  transform: scale(1); /* Початковий масштаб */
-  transition: transform 5s ease-in-out; /* Плавність зміни масштабу */
+  /* Затемнення */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    var(--overlay-opacity)
+  ); /* Прозорість змінюється */
+  transition: transform 5s ease-in-out, background-color 0.3s ease-in-out;
   z-index: -1; /* Відправляє фон позаду тексту */
 }
 
