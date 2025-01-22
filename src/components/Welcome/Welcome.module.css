@@ -2,24 +2,74 @@
 .welcome-section {
   margin-bottom: 120px;
   box-shadow: 0 16px 16px rgb(0, 0, 0);
-
   /* Розміри контейнера */
   width: 99vw;
   height: 95vh;
   overflow: hidden; /* Приховує вихідні межі зображення */
-
   /* Центрування вмісту */
   display: flex;
   justify-content: center;
   align-items: center;
-
   /* Додаткові стилі */
   position: relative; /* Для правильного позиціонування зображення */
   color: white;
   text-align: center;
   font-size: 2rem;
 }
-
+/* Текст зліва */
+.text-column-left {
+  position: absolute;
+  top: 10%; /* Відступ зверху */
+  left: 1%; /* Ближче до краю */
+  font-size: 2rem; /* Великий розмір тексту */
+  text-align: left;
+  max-width: 400px; /* Ширина тексту */
+  line-height: 1.4; /* Відстань між рядками */
+  font-weight: bold; /* Жирні букви */
+  /* Градієнт тексту */
+  background: linear-gradient(
+    90deg,
+    white,
+    rgb(174, 255, 0)
+  ); /* Білий до зеленого */
+  background-clip: text; /* Стандартна властивість */
+  -webkit-text-fill-color: transparent;
+  /* Мінімальне підсвічування */
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+  /* Рамка та фон */
+  padding: 15px; /* Відступи всередині блоку */
+  background-color: rgba(0, 0, 0, 0.5); /* Темно-прозорий фон */
+  border: 2px solid rgb(174, 255, 0); /* Зелена рамка */
+  border-radius: 15px; /* Закруглені кути */
+  box-shadow: 0 0 20px rgb(174, 255, 0); /* Світіння рамки */
+}
+/* Текст справа */
+.text-column-right {
+  position: absolute;
+  top: 10%; /* Відступ зверху */
+  right: 1%; /* Ближче до краю */
+  font-size: 2rem; /* Ще більший розмір тексту */
+  text-align: right;
+  max-width: 400px; /* Ширина тексту */
+  line-height: 1.4; /* Відстань між рядками */
+  font-weight: bold; /* Жирні букви */
+  /* Градієнт тексту */
+  background: linear-gradient(
+    90deg,
+    rgb(174, 255, 0),
+    white
+  ); /* Білий до зеленого */
+  background-clip: text; /* Стандартна властивість */
+  -webkit-text-fill-color: transparent;
+  /* Мінімальне підсвічування */
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+  /* Рамка та фон */
+  padding: 15px; /* Відступи всередині блоку */
+  background-color: rgba(0, 0, 0, 0.5); /* Темно-прозорий фон */
+  border: 2px solid rgb(174, 255, 0); /* Зелена рамка */
+  border-radius: 15px; /* Закруглені кути */
+  box-shadow: 0 0 10px rgb(174, 255, 0); /* Світіння рамки */
+}
 /* Псевдоелемент для затемнення */
 .welcome-section::before {
   content: ""; /* Псевдоелемент */
@@ -45,7 +95,6 @@
   transition: transform 5s ease-in-out, background-color 0.3s ease-in-out;
   z-index: -1; /* Відправляє фон позаду тексту */
 }
-
 .welcome-section:hover::before {
   transform: scale(1.1); /* Збільшення лише фону */
 }
