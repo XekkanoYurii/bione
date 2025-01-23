@@ -34,12 +34,12 @@ img {
   transition: color 0.3s ease;
 }
 .active {
-  color: #0aff0a; /* Підсвічування активного пункту */
+  color: #00c000; /* Підсвічування активного пункту */
   font-weight: bold;
 }
 /* Світіння при наведенні */
 .nav-item:hover {
-  color: #00ffcc;
+  color: #7fef08;
   text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
 }
 
@@ -69,7 +69,7 @@ img {
 .logo:hover .logo-img {
   transform: scale(1.1); /* Збільшення при наведенні */
   transition: transform 0.3s ease;
-  background-color: #00fbff;
+  background-color: #00c843;
   box-shadow: 0 2px 10px #00fbff;
   border-radius: 50%;
 }

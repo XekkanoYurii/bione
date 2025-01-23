@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import img1 from "../ImagesComponents/gallyry/craigmdennis.jpg";
 import img2 from "../ImagesComponents/gallyry/markusspiske.jpg";
 import img3 from "../ImagesComponents/gallyry/tara-winstead.jpg";
-import ModalGallery from "./ModalGallery";
 import styles from "./GalleryHero.module.css"; // Імпорт стилів
 
 const images = [img1, img2, img3];
@@ -31,6 +30,7 @@ const GalleryHero = () => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
   // Закриття модального вікна при натисканні на "Escape"
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -45,8 +45,10 @@ const GalleryHero = () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isModalOpen]);
+
   return (
     <section className={styles["gallery-section"]}>
+      <h2 className={styles["title"]}>Gallery</h2>
       <div className={styles["gallery"]}>
         {images.map((src, index) => (
           <img
@@ -60,19 +62,30 @@ const GalleryHero = () => {
       </div>
 
       {isModalOpen && (
-        <ModalGallery onClose={closeModal}>
-          <button className={styles["modal-prev"]} onClick={prevImage}>
-            &#8249; {/* Ліва стрілка */}
-          </button>
-          <img
-            src={images[currentImageIndex]}
-            alt={`Modal Image ${currentImageIndex + 1}`}
-            className={styles["modal-image"]}
-          />
-          <button className={styles["modal-next"]} onClick={nextImage}>
-            &#8250; {/* Права стрілка */}
-          </button>
-        </ModalGallery>
+        <div
+          className={styles["modal"]}
+          onClick={closeModal} // Закриття при кліку поза модальним вікном
+        >
+          <div
+            className={styles["modal-content"]}
+            onClick={(e) => e.stopPropagation()} // Забороняємо клік закривати модалку
+          >
+            <button className={styles["close-btn"]} onClick={closeModal}>
+              &times;
+            </button>
+            <button className={styles["modal-prev"]} onClick={prevImage}>
+              &#8249;
+            </button>
+            <img
+              src={images[currentImageIndex]}
+              alt={`Modal Image ${currentImageIndex + 1}`}
+              className={styles["modal-image"]}
+            />
+            <button className={styles["modal-next"]} onClick={nextImage}>
+              &#8250;
+            </button>
+          </div>
+        </div>
       )}
     </section>
   );

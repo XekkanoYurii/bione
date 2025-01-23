@@ -1,31 +1,25 @@
 .nav-button {
   position: fixed;
   bottom: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
   font-size: 1.5rem;
   font-weight: bold;
   background-color: #00fbff;
   color: black;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .nav-button:hover {
   background-color: black;
   color: #00ff00;
   box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
 }
-
 .left {
   left: 20px;
 }
-
 .right {
   right: 20px;
 }
