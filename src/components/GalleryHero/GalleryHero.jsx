@@ -1,110 +1,81 @@
 import { useState, useEffect } from "react";
-import styles from "./GalleryHero.module.css";
+import img1 from "../ImagesComponents/gallyry/craigmdennis.jpg";
+import img2 from "../ImagesComponents/gallyry/markusspiske.jpg";
+import img3 from "../ImagesComponents/gallyry/tara-winstead.jpg";
+import ModalGallery from "./ModalGallery";
+import styles from "./GalleryHero.module.css"; // Імпорт стилів
 
-// Список з фотографіями, що знаходяться локально в проєкті
-import img1 from "../ImagesComponents/gallyry/pexels-craigmdennis-57007 (1).jpg";
-import img2 from "../ImagesComponents/gallyry/pexels-markusspiske-1089438 (1).jpg";
-import img3 from "../ImagesComponents/gallyry/pexels-tara-winstead-8386440 (1).jpg";
+const images = [img1, img2, img3];
 
-const images = [img1, img2, img3]; // Масив зображень
+const GalleryHero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-function Gallery() {
-  const [isOpen, setIsOpen] = useState(false); // Стейт для модального вікна
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Стейт для поточної фотографії у модальному вікні
-
-  // Відкриття фотографії
   const openModal = (index) => {
     setCurrentImageIndex(index);
-    setIsOpen(true);
-    document.body.style.overflow = "hidden"; // Вимикаємо скролл сторінки
+    setIsModalOpen(true);
   };
 
-  // Закриття модального вікна
   const closeModal = () => {
-    setIsOpen(false);
-    document.body.style.overflow = "auto"; // Включаємо скролл сторінки назад
+    setIsModalOpen(false);
   };
 
-  // Перемикання на попереднє фото
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  // Перемикання на наступне фото
   const nextImage = () => {
-    setCurrentImageIndex((nextIndex) =>
-      nextIndex === images.length - 1 ? 0 : nextIndex + 1
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  // Додаємо обробник для клавіші Escape
+  // Закриття модального вікна при натисканні на "Escape"
   useEffect(() => {
-    const handleEscapeKey = (event) => {
+    const handleKeyDown = (event) => {
       if (event.key === "Escape") {
-        closeModal(); // Закриваємо модальне вікно при натисканні Escape
+        closeModal();
       }
     };
-
-    // Додаємо слухач події при монтуванні компонента
-    window.addEventListener("keydown", handleEscapeKey);
-
-    // Очищаємо слухач при демонтажі компонента
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
     return () => {
-      window.removeEventListener("keydown", handleEscapeKey);
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
-
+  }, [isModalOpen]);
   return (
     <section className={styles["gallery-section"]}>
-      <h2 className={styles["gallery-title"]}>
-        Explore <span>AI</span> Technology
-      </h2>
-      <div className={styles["gallery-container"]}>
-        {images.map((image, index) => (
-          <div
+      <div className={styles["gallery"]}>
+        {images.map((src, index) => (
+          <img
             key={index}
-            className={styles["gallery-item"]}
-            onClick={() => openModal(index)} // Відкриваємо фото при кліку
-          >
-            <img
-              src={image}
-              alt={`AI Technology ${index + 1}`}
-              className={styles["gallery-image"]}
-            />
-          </div>
+            src={src}
+            alt={`Gallery Image ${index + 1}`}
+            className={styles["gallery-image"]}
+            onClick={() => openModal(index)}
+          />
         ))}
       </div>
 
-      {/* Модальне вікно для фотографії */}
-      {isOpen && (
-        <div className={styles["modal"]} onClick={closeModal}>
-          <div
-            className={styles["modal-content"]}
-            onClick={(e) => e.stopPropagation()} // Блокуємо клік по зображенню
-          >
-            <button className={styles["close-btn"]} onClick={closeModal}>
-              ×
-            </button>
-            <img
-              src={images[currentImageIndex]}
-              alt={`Modal AI Technology ${currentImageIndex + 1}`}
-              className={styles["modal-image"]}
-            />
-            <div className={styles["modal-controls"]}>
-              <button className={styles["prev-btn"]} onClick={prevImage}>
-                ←
-              </button>
-              <button className={styles["next-btn"]} onClick={nextImage}>
-                →
-              </button>
-            </div>
-          </div>
-        </div>
+      {isModalOpen && (
+        <ModalGallery onClose={closeModal}>
+          <button className={styles["modal-prev"]} onClick={prevImage}>
+            &#8249; {/* Ліва стрілка */}
+          </button>
+          <img
+            src={images[currentImageIndex]}
+            alt={`Modal Image ${currentImageIndex + 1}`}
+            className={styles["modal-image"]}
+          />
+          <button className={styles["modal-next"]} onClick={nextImage}>
+            &#8250; {/* Права стрілка */}
+          </button>
+        </ModalGallery>
       )}
     </section>
   );
-}
+};
 
-export default Gallery;
+export default GalleryHero;
