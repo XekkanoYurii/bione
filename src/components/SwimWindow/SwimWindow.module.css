@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.71); /* Прозорий чорний фон */
   z-index: 1000; /* Поверх всього */
   display: flex;
-  justify-content: flex-end; /* Початкова позиція справа */
+  justify-content: center; /* Початкова позиція справа */
   align-items: center;
   overflow: hidden; /* Блокуємо прокрутку фону */
   opacity: 0; /* Початково прозоре */
@@ -25,14 +25,14 @@
   position: relative;
   width: 50%; /* Ширина спливаючого вікна */
   height: auto;
-  background-color: rgba(0, 0, 0, 0.879); /* Прозорий темний фон */
+  background: radial-gradient(circle, #001220, #000d1a, #000814);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.941),
     inset 0 0 30px rgba(1, 251, 72, 0.2);
   transform: translateX(100%); /* Початкове положення за межами екрану */
   animation: slideIn 0.8s forwards ease-in-out; /* Плавна поява */
-  border: 1px solid rgba(0, 255, 150, 0.5); /* Світиться рамка */
+  border: 1px solid #0077ff; /* Світиться рамка */
 }
 /* Анімація виїзду */
 @keyframes slideIn {
@@ -47,44 +47,61 @@
   font-family: "Arial", sans-serif;
 }
 /* Заголовок */
-.swim-content h2 {
+.title {
+  color: #ffffff; /* Основний білий текст */
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff,
+    0 0 80px #0077ff; /* Ефект сяйва */
   font-size: 2rem;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #00b41b;
-  /* text-shadow: 0 0 10px #00ff96, 0 0 20px rgba(0, 255, 150, 0.7); */
+  margin-bottom: 50px;
 }
-/* Текст */
-.swim-content p {
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px #0077ff, 0 0 20px #00d4ff; /* Світіння */
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+.list-item {
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.9);
+}
+/* Текст */
+.swim-content p {
 }
 /* Кнопка */
 /* Основна кнопка */
 .swim-button {
   background: transparent; /* Прозорий фон */
-  color: #00ff6600; /* Початковий колір тексту */
-  border: 2px solid rgba(0, 255, 104, 0.5); /* Напівпрозора рамка */
+  border: 2px solid #0077ff; /* Напівпрозора рамка */
   border-radius: 30px; /* Округлі кути */
   padding: 12px 25px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
-
-  /* Внутрішня тінь */
-  box-shadow: inset 0 0 10px rgba(0, 255, 104, 0.5),
-    inset 0 0 20px rgba(0, 255, 104, 0.3);
+  /*  */
+  background: linear-gradient(
+    90deg,
+    #4b0082,
+    #0b3d91,
+    #001f54
+  ); /* Градієнт кнопки */
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3); /* Сяйво */
+  transition: all 0.4s ease-in-out;
 }
-
 /* Ефекти при наведенні */
 .swim-button:hover {
-  background: #00ff68; /* Легка підсвітка фону */
-  color: black; /* Колір тексту при наведенні */
-  transform: scale(1.1); /* Збільшення кнопки */
-  border-color: #00ff68; /* Яскравіша рамка */
-
   /* Ефект світіння */
   box-shadow: 0 0 15px rgba(0, 255, 104, 0.8), 0 0 30px rgba(0, 255, 104, 1);
+
+  background: linear-gradient(90deg, #0077ff, #00d4ff);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5); /* Інтенсивніше сяйво */
+  transform: scale(1.1);
 }

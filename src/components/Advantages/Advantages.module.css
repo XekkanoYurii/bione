@@ -45,13 +45,38 @@ span {
   border-color: #00f1f5; /* Зміна кольору рамки */
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Світіння рамки */
 }
-.advantage-title {
-  font-size: 1.8rem; /* Збільшений розмір заголовка */
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Стиль для контейнера кожного блоку переваг */
+.advantage-container {
+  padding: 20px; /* Внутрішній відступ */
+  background-color: rgba(0, 0, 0, 0.7); /* Темний прозорий фон */
+  border: 2px solid #00ffcc; /* Бірюзова рамка */
+  border-radius: 15px; /* Закруглені кути */
+  box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3); /* Легка бірюзова тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація на ховер */
 }
+
+/* Ефект при наведенні */
+.advantage-container:hover {
+  transform: translateY(-10px); /* Легке підняття блока */
+  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5); /* Інтенсивніша тінь */
+  background-color: rgba(0, 0, 0, 0.85); /* Злегка темніший фон */
+}
+
+/* Стиль для заголовків */
+.advantage-title {
+  font-size: 1.8rem; /* Розмір заголовка */
+  font-weight: bold; /* Жирний текст */
+  color: #00ffcc; /* Бірюзовий колір тексту */
+  margin-bottom: 10px; /* Відступ до тексту */
+  text-align: center; /* Центрування заголовка */
+  text-shadow: 0 4px 10px rgba(0, 255, 204, 0.6); /* Світіння заголовка */
+}
+
+/* Стиль для основного тексту */
 .advantage-full-text {
-  font-size: 1rem;
-  color: white;
-  margin-top: 10px;
+  font-size: 1rem; /* Розмір тексту */
+  color: white; /* Білий колір тексту */
+  line-height: 1.5; /* Відстань між рядками */
+  margin-top: 10px; /* Відступ зверху */
+  text-align: center; /* Центрування тексту */
 }

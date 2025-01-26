@@ -1,7 +1,6 @@
 import Welcome from "../Welcome/Welcome";
 import SwimWindow from "../SwimWindow/SwimWindow";
 import Advantages from "../Advantages/Advantages";
-import GalleryHero from "../GalleryHero/GalleryHero";
 import NavigationButton from "../NavigationButton/NavigationButton";
 
 import styles from "./Home.module.css";
@@ -18,7 +17,6 @@ function Home() {
       </div>
       <div className={styles["content"]}>
         <Advantages />
-        <GalleryHero />
       </div>
       <NavigationButton direction="right" to="/about" />
     </section>

@@ -6,11 +6,9 @@ function WelcomeSection() {
       <div className={styles["welcome-section"]}></div>
       <ul className={styles["text-list"]}>
         <li className={styles["text-item"]}>
-          Знання поруч, лише простягни руку
+          «Ми мислимо інакше. Ми створюємо більше.»
         </li>
-        <li className={styles["text-item"]}>
-          Відкрий те, що завжди було перед тобою
-        </li>
+        <li className={styles["text-item"]}>«Майбутнє починається з BiOne.»</li>
       </ul>
     </div>
   );

@@ -43,10 +43,29 @@ const SwimWindow = () => {
 
   return (
     <div className={styles["swim-overlay"]}>
-      <div className={`${styles["swim-window"]}`}>
+      <div className={styles["swim-window"]}>
         <div className={styles["swim-content"]}>
-          <h2>Ласкаво просимо!</h2>
-          <p>Дізнайтеся більше про наші можливості!</p>
+          <h2 className={styles["title"]}>
+            Welcome to space <span className={styles["span"]}>B1One</span>
+          </h2>
+          <ul className={styles["list"]}>
+            <li className={styles["list-item"]}>
+              - Кастомні AI-моделі для оптимізації процесів
+            </li>
+            <li className={styles["list-item"]}>
+              - Розумна аналітика, яка допомагає приймати кращі рішення
+            </li>
+            <li className={styles["list-item"]}>
+              - Інноваційні інструменти, що відкривають нові горизонти.
+              Розширюйте можливості
+            </li>
+            <li className={styles["list-item"]}>
+              - Досліджуйте свіжі підходи до вирішення задач
+            </li>
+            <li className={styles["list-item"]}>
+              - Керуйте процесами ефективно з нашими технологіями
+            </li>
+          </ul>
           <button className={styles["swim-button"]} onClick={handleClose}>
             Дізнатись!
           </button>
