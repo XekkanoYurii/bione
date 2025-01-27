@@ -11,11 +11,8 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  background-color: rgba(30, 30, 50, 0.9); /* Глибший темний прозорий фон */
   border-radius: 15px; /* Закруглені кути */
   animation: fadeIn 1s ease-in-out; /* Анімація появи */
-
-  background-color: #16191c; /* Темний фон схожий на приклад */
 }
 /* Заголовок */
 .about-title {

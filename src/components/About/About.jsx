@@ -1,4 +1,3 @@
-import BlockList from "./BlockList/BlockList";
 import NavigationButton from "../NavigationButton/NavigationButton";
 
 import styles from "./About.module.css";
@@ -7,9 +6,7 @@ function About() {
   return (
     <section className={styles["about"]}>
       <div className={styles["about-container"]}>
-        <h2 className={styles["about-title"]}>
-          Досліджуйте можливості разом із <span>B1ONE</span>
-        </h2>
+        <h2 className={styles["about-title"]}>про нас</h2>
         <p className={styles["about-text"]}>
           Вітаємо вас у нашій інформаційній секції! Тут зібраний список цікавих
           тем, які допоможуть вам глибше зануритися у світ штучного інтелекту,
@@ -20,7 +17,41 @@ function About() {
           тут. Зробіть свій вибір і продовжуйте відкривати світ із нами!
         </p>
       </div>
-      <BlockList />
+      <div>
+        <h2>Про наш сервіс</h2>
+        <div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <img src="./AboutImage/a.jpg" alt="image" />
+        </div>
+      </div>
+      <div>
+        <h2>Про команду</h2>
+        <div>
+          <img src="./AboutImage/b.jpg" alt="image" />
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>Наші цілі</h2>
+        <div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <img src="./AboutImage/d.jpg" alt="image" />
+        </div>
+      </div>
       <NavigationButton direction="left" to="/" />
       <NavigationButton direction="right" to="/products" />
     </section>
