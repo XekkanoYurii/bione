@@ -15,7 +15,7 @@
   animation: fadeIn 1s ease-in-out; /* Анімація появи */
 }
 /* Заголовок */
-.about-title {
+.about-title-h2 {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -35,4 +35,71 @@
   color: #d4f0ff; /* Світлий блакитний текст */
   text-align: center; /* Центруємо текст */
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Легка тінь тексту */
+}
+/* Списки */
+.lists-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #16191c;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.section-container {
+  align-items: center; /* Центруємо елементи по вертикалі */
+  justify-content: space-between; /* Розташування елементів зліва/справа */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title-h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ffffff, #79e8ab); /* Градієнт */
+  -webkit-background-clip: text; /* Прив'язка градієнта до тексту */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Прозорий фон для тексту */
+  margin-bottom: 90px;
+}
+.content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Адаптивний вигляд */
+}
+.list-left {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 10px;
+  width: 600px;
+  gap: 30px;
+}
+.list-right {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  padding: 10px;
+  width: 600px;
+  gap: 30px;
+}
+.list-item {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: aliceblue;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.1); /* Легка тінь тексту */
+}
+.span {
+  color: rgba(255, 255, 0, 0.587);
+}
+.list-img {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Легка тінь */
 }
