@@ -26,6 +26,14 @@ function Header() {
           Home
         </Link>
         <Link
+          to="/education"
+          className={`${styles["nav-item"]} ${
+            location.pathname === "/education" ? styles.active : ""
+          }`}
+        >
+          Education
+        </Link>
+        <Link
           to="/about"
           className={`${styles["nav-item"]} ${
             location.pathname === "/about" ? styles.active : ""
