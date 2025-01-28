@@ -11,9 +11,9 @@ function Home() {
       <Welcome />
       <SwimWindow />
       <div className={styles["hero-container"]}>
-        <h1 className={styles["hero-title"]}>
+        <h2 className={styles["hero-title"]}>
           Open <span className={styles["hero-title-span"]}>AI</span> world
-        </h1>
+        </h2>
       </div>
       <div className={styles["content"]}>
         <Advantages />

@@ -49,30 +49,26 @@ function About() {
                 .
               </li>
             </ul>
-            <img
-              src="./AboutImage/a.jpg"
-              alt="image"
-              className={styles["list-img"]}
-            />
+            <div
+              className={`${styles["img-container"]} ${styles["img-space-container"]}`}
+            ></div>
           </div>
         </div>
         <div className={styles["section-container"]}>
           <h3 className={styles["section-title-h3"]}>Про команду</h3>
           <div className={styles["content"]}>
-            <img
-              src="./AboutImage/b.jpg"
-              alt="image"
-              className={styles["list-img"]}
-            />
+            <div
+              className={`${styles["img-container"]} ${styles["img-team-container"]}`}
+            ></div>
             <ul className={styles["list-right"]}>
               <li className={styles["list-item"]}>
                 Ми – команда досвідчених розробників, об’єднаних спільною метою:
                 зробити <span className={styles["span"]}>штучний інтелект</span>{" "}
-                зрозумілим і доступним{" "}
+                зрозумілим і доступним
                 <span className={styles["span"]}>для кожного</span>.
               </li>
               <li className={styles["list-item"]}>
-                Спеціалізуючись на AI, ми{" "}
+                Спеціалізуючись на AI, ми
                 <span className={styles["span"]}>допомагаємо</span> людям не
                 лише освоїти технології, а й максимально адаптувати їх під свої
                 потреби.
@@ -109,18 +105,16 @@ function About() {
                 Ми прагнемо <span className={styles["span"]}>змінити світ</span>{" "}
                 на краще,{" "}
                 <span className={styles["span"]}>допомагаючи людям</span> бачити
-                ширшу картину, брати участь у великих змінах і{" "}
+                ширшу картину, брати участь у великих змінах і
                 <span className={styles["span"]}>
                   створювати щасливе майбутнє
                 </span>{" "}
                 для всіх.
               </li>
             </ul>
-            <img
-              src="./AboutImage/d.jpg"
-              alt="image"
-              className={styles["list-img"]}
-            />
+            <div
+              className={`${styles["img-container"]} ${styles["img-goal-container"]}`}
+            ></div>
           </div>
         </div>
       </div>

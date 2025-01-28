@@ -4,7 +4,11 @@
   margin: 0 auto; /* Центруємо секцію */
   border-radius: 20px;
   overflow: hidden; /* Ховаємо зайве */
-  background-color: #16191c; /* Темний фон схожий на приклад */
+  background: linear-gradient(
+    135deg,
+    #0a0d12,
+    #16191c
+  ); /* Темний градієнтний фон */
 }
 /* Контейнер для тексту */
 .about-container {
@@ -38,13 +42,17 @@
 }
 /* Списки */
 .lists-container {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #16191c;
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    #0a0d12,
+    #16191c
+  ); /* Темний градієнтний фон */
 }
 .section-container {
   align-items: center; /* Центруємо елементи по вертикалі */
@@ -63,43 +71,79 @@
   -webkit-text-fill-color: transparent; /* Прозорий фон для тексту */
   margin-bottom: 90px;
 }
+/*  */
+/* Контейнер загального контенту */
 .content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 90px;
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap; /* Адаптивний вигляд */
-}
-.list-left {
-  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  text-align: left;
-  padding: 10px;
-  width: 600px;
-  gap: 30px;
+  gap: 50px; /* Відстань між списком та фото */
 }
+
+/* Ліва колонка (список) */
+.list-left,
 .list-right {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: right;
-  padding: 10px;
   width: 600px;
-  gap: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.list-right {
+  text-align: right;
+}
+
+/* Оформлення списку */
 .list-item {
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.4;
   color: aliceblue;
-  text-shadow: 0 0 8px rgba(0, 255, 255, 0.1); /* Легка тінь тексту */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
 }
+
+/* Виділення ключових слів */
 .span {
-  color: rgba(255, 255, 0, 0.587);
+  color: rgba(255, 255, 0, 0.8);
+  font-weight: bold;
 }
-.list-img {
-  width: 200px;
-  height: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Легка тінь */
+
+/* Загальний стиль контейнера зображення */
+.img-container {
+  width: 550px;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+  position: relative;
+}
+
+/* Фон для секції "Про наш портал" */
+.img-space-container {
+  background-image: url("/AboutImage/space.jpg");
+}
+
+/* Фон для секції "Про команду" */
+.img-team-container {
+  background-image: url("/AboutImage/team.jpg");
+}
+
+/* Фон для секції "Наші цілі" */
+.img-goal-container {
+  background-image: url("/AboutImage/goal.jpg");
+}
+
+/* Додаємо ефект світіння навколо зображення */
+.img-container::before {
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.9));
+  opacity: 0.3;
+  filter: blur(50px);
+  z-index: -1;
 }

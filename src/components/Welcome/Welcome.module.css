@@ -18,7 +18,47 @@
   background: linear-gradient(rgba(0, 0, 0, 0.098), rgba(0, 0, 0, 0.18)),
     url("/public/image/welcome10px.jpg") center/cover no-repeat;
   background-attachment: fixed; /* Фіксований бекграунд */
+  margin-bottom: 90px;
 }
+.welcome-title {
+  width: 1000px;
+  font-size: 4rem; /* Збільшений розмір шрифту */
+  font-weight: bold; /* Напівжирний текст */
+  text-transform: uppercase; /* Текст великими літерами */
+  background: linear-gradient(
+    to right,
+    white,
+    green
+  ); /* Горизонтальний градієнт */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Прозорий текст для градієнта */
+  text-align: center; /* Вирівнювання тексту */
+  animation: slide-in-left 1.5s ease-out forwards; /* Анімація появи зліва */
+  opacity: 0; /* Початково прихований */
+  transform: translateX(-50px); /* Початкове зміщення вліво */
+  margin: 0; /* Забираємо зайві відступи */
+  position: absolute; /* Розташування відносно контейнера */
+  top: 10%; /* Розташування у верхній частині секції */
+  left: 50%; /* Центрування горизонтально */
+  transform: translate(
+    -50%,
+    -50px
+  ); /* Вирівнюємо текст по центру та з початковим зсувом */
+}
+
+/* Анімація для появи заголовка зліва направо */
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50px); /* Початкове положення зсуву */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0); /* Фінальне положення */
+  }
+}
+
 /* Список текстів */
 .text-list {
   list-style: none; /* Відсутність стандартних маркерів списку */
@@ -28,11 +68,11 @@
   justify-content: space-between;
   text-align: center; /* Розташування текстів вертикально */
   padding: 0;
-  gap: 15px;
 }
 /* Елементи тексту */
 .text-item {
-  margin: 150px 5px;
+  margin: 0 5px;
+  margin-bottom: 270px;
   width: 350px;
   font-size: 1.6rem; /* Розмір тексту */
   font-weight: bold; /* Жирний текст */
@@ -42,6 +82,6 @@
   padding: 10px 20px; /* Внутрішній відступ */
   background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон */
   border-radius: 10px; /* Закруглені кути */
-  border: 2px solid rgb(174, 255, 0); /* Зелена рамка */
-  box-shadow: 0 0 10px rgb(174, 255, 0); /* Легке підсвічування */
+  border: 2px solid rgba(9, 251, 17, 0.345); /* Зелена рамка */
+  box-shadow: 0 0 10px rgb(54, 105, 169); /* Легке підсвічування */
 }

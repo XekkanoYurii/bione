@@ -1,25 +1,32 @@
 .nav-button {
   position: fixed;
-  bottom: 20px;
-  width: 30px;
-  height: 30px;
-  border-radius: 20%;
+  top: 50%; /* Центруємо по вертикалі */
+  transform: translateY(-50%); /* Вирівнюємо по центру вертикально */
+  width: 40px; /* Збільшений розмір для кращої взаємодії */
+  height: 40px;
+  border-radius: 10%; /* Робимо кнопки круглими */
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: #00fbff;
+  background-color: #00fbff85;
   color: black;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Стиль для ховера */
 .nav-button:hover {
   background-color: black;
   color: #00ff00;
   box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
 }
+
+/* Кнопка зліва */
 .left {
-  left: 20px;
+  left: 0; /* Притискаємо до лівого краю */
 }
+
+/* Кнопка справа */
 .right {
-  right: 20px;
+  right: 0; /* Притискаємо до правого краю */
 }
