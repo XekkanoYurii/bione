@@ -2,13 +2,8 @@
 .about {
   width: 100%; /* Повна ширина */
   margin: 0 auto; /* Центруємо секцію */
-  border-radius: 20px;
-  overflow: hidden; /* Ховаємо зайве */
-  background: linear-gradient(
-    135deg,
-    #0a0d12,
-    #16191c
-  ); /* Темний градієнтний фон */
+  background-image: url("/About/");
+  background-color: #000000;
 }
 /* Контейнер для тексту */
 .about-container {
@@ -26,7 +21,7 @@
   text-align: center; /* Вирівнювання тексту */
   color: aqua;
   font-weight: bold;
-  font-size: 2rem; /* Збільшений розмір шрифту */
+  font-size: 2.2rem; /* Збільшений розмір шрифту */
   padding: 50px 0;
 }
 /* Текст */
@@ -48,11 +43,7 @@
   width: 100%;
   padding: 20px 0;
   margin: 0 auto;
-  background: linear-gradient(
-    135deg,
-    #0a0d12,
-    #16191c
-  ); /* Темний градієнтний фон */
+  background-color: #000000;
 }
 .section-container {
   align-items: center; /* Центруємо елементи по вертикалі */
@@ -60,7 +51,9 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  background-color: #000000;
 }
+
 .section-title-h3 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -69,18 +62,18 @@
   -webkit-background-clip: text; /* Прив'язка градієнта до тексту */
   background-clip: text;
   -webkit-text-fill-color: transparent; /* Прозорий фон для тексту */
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 /*  */
 /* Контейнер загального контенту */
 .content {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
+  margin-bottom: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px; /* Відстань між списком та фото */
 }
 
 /* Ліва колонка (список) */
@@ -107,43 +100,43 @@
 
 /* Виділення ключових слів */
 .span {
-  color: rgba(255, 255, 0, 0.8);
+  color: rgb(103, 192, 255);
   font-weight: bold;
 }
 
 /* Загальний стиль контейнера зображення */
 .img-container {
-  width: 550px;
-  height: 550px;
+  width: 350px;
+  height: 350px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
   position: relative;
+
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Фон для секції "Про наш портал" */
 .img-space-container {
-  background-image: url("/AboutImage/space.jpg");
+  background-image: url("/AboutImage/manopenlock.jpg"),
+    radial-gradient(circle, rgba(24, 155, 255, 0.3), rgba(0, 0, 0, 0.8));
+  background-blend-mode: overlay;
 }
 
 /* Фон для секції "Про команду" */
 .img-team-container {
-  background-image: url("/AboutImage/team.jpg");
+  background-image: url("/AboutImage/face.jpg"),
+    radial-gradient(circle, rgba(24, 155, 255, 0.3), rgba(0, 0, 0, 0.8));
+  background-blend-mode: overlay;
 }
 
 /* Фон для секції "Наші цілі" */
 .img-goal-container {
-  background-image: url("/AboutImage/goal.jpg");
-}
-
-/* Додаємо ефект світіння навколо зображення */
-.img-container::before {
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  background: radial-gradient(circle, rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.9));
-  opacity: 0.3;
-  filter: blur(50px);
-  z-index: -1;
+  background-image: url("/AboutImage/pantera.jpg"),
+    radial-gradient(circle, rgba(24, 155, 255, 0.3), rgba(0, 0, 0, 0.8));
+  background-blend-mode: overlay;
 }
