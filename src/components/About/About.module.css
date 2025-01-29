@@ -2,35 +2,53 @@
 .about {
   width: 100%; /* Повна ширина */
   margin: 0 auto; /* Центруємо секцію */
-  background-image: url("/About/");
   background-color: #000000;
 }
 /* Контейнер для тексту */
 .about-container {
-  width: 100%;
+  width: 1200px;
+  height: 800px;
   margin: 0 auto;
-  padding: 0;
-  border-radius: 15px; /* Закруглені кути */
-  animation: fadeIn 1s ease-in-out; /* Анімація появи */
+  padding: 20px;
+  background-image: url("/AboutImage/hands.jpg"),
+    radial-gradient(circle, rgba(24, 155, 255, 0.1), rgba(0, 0, 0, 0.9));
+  background-blend-mode: overlay;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 /* Заголовок */
 .about-title-h2 {
-  width: 600px;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; /* Вирівнювання тексту */
-  color: aqua;
-  font-weight: bold;
-  font-size: 2.2rem; /* Збільшений розмір шрифту */
   padding: 50px 0;
+  text-align: center; /* Вирівнювання тексту */
+  font-size: 2.5rem; /* Збільшений розмір шрифту */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: aqua;
+  background: linear-gradient(90deg, #ffffff, #18ffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Прозорий текст із градієнтом */
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 /* Текст */
 .about-text {
-  padding-bottom: 50px;
+  padding: 20px;
   margin: 0 auto;
   width: 1020px;
   font-size: 1.1rem;
   line-height: 1.4;
+  border: 1px solid #00b3ff;
+  border-radius: 20px;
+  background-color: #0d90e82c;
   color: #d4f0ff; /* Світлий блакитний текст */
   text-align: center; /* Центруємо текст */
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Легка тінь тексту */
@@ -55,6 +73,8 @@
 }
 
 .section-title-h3 {
+  border-top: 1px solid #555;
+  padding-top: 20px;
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
@@ -83,6 +103,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
   gap: 20px;
 }
 
