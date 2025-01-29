@@ -4,7 +4,7 @@ import styles from "./BlockList.module.css";
 function BlockList() {
   const blocks = [
     {
-      title: "Перше користування чатом GPT",
+      title: "Перше користування",
       path: "/education/first-use", // 🔹 Було "/about/first-use"
       image: "./BlockImg/1.jpg",
     },

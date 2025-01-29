@@ -6,12 +6,15 @@
 }
 /* Контейнер для тексту */
 .about-container {
-  width: 1200px;
-  height: 800px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px;
-  background-image: url("/AboutImage/hands.jpg"),
-    radial-gradient(circle, rgba(24, 155, 255, 0.1), rgba(0, 0, 0, 0.9));
+  background-image: radial-gradient(
+      circle,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/AboutImage/aboutImage.jpg");
   background-blend-mode: overlay;
 
   background-position: center;
@@ -24,9 +27,7 @@
 /* Заголовок */
 .about-title-h2 {
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px 0;
+  margin: 100px 0 300px 100px;
   text-align: center; /* Вирівнювання тексту */
   font-size: 2.5rem; /* Збільшений розмір шрифту */
   text-transform: uppercase;
@@ -41,14 +42,12 @@
 }
 /* Текст */
 .about-text {
-  padding: 20px;
-  margin: 0 auto;
-  width: 1020px;
-  font-size: 1.1rem;
-  line-height: 1.4;
-  border: 1px solid #00b3ff;
+  margin: 0 0 0 100px;
+  width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  border-bottom: 1px solid #00b3ff;
   border-radius: 20px;
-  background-color: #0d90e82c;
   color: #d4f0ff; /* Світлий блакитний текст */
   text-align: center; /* Центруємо текст */
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Легка тінь тексту */
@@ -59,7 +58,6 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
-  padding: 20px 0;
   margin: 0 auto;
   background-color: #000000;
 }

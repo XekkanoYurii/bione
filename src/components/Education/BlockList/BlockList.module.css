@@ -41,12 +41,6 @@
     rgba(40, 40, 60, 0.9)
   ); /* Градієнтний фон */
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3), 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-.block-item:hover {
-  transform: scale(1.05); /* Легке збільшення при наведенні */
-  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.6), 0 12px 50px rgba(0, 0, 0, 0.3); /* Більша тінь */
 }
 
 /* Клікабельний блок (Link) */
@@ -96,8 +90,7 @@
 }
 
 .block-link:hover .block-title {
-  background-color: #00ffcc; /* Зелений фон при наведенні */
-  color: #000; /* Чорний текст */
+  color: #b1e8ff; /* Чорний текст */
 }
 
 /* Адаптивність */
