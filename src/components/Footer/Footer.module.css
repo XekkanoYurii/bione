@@ -1,112 +1,49 @@
-.wrapper {
-  background-color: rgba(0, 0, 0, 0.4);
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-}
+/* Загальний стиль футера */
 .footer {
-  padding: 20px;
-}
-.topSection {
-  display: flex;
-  justify-content: space-around;
-}
-.linksSection {
-  display: flex;
-  gap: 50px;
-}
-.list-div {
-  padding: 10px;
-}
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 150px;
-  justify-content: space-around;
-  border: 2px solid #00c3c6; /* Рамка для ul */
-  border-radius: 15px; /* Закруглені краї */
-  padding: 5px; /* Внутрішній відступ */
-  background-color: rgba(0, 0, 0, 0.6); /* Темний фон */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація */
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Легка тінь */
-}
-.title {
-  color: aliceblue;
-  padding-bottom: 10px;
-}
-.listItem {
-  border: 3px solid #00c3c6; /* Рамка для ul */
-  border-radius: 15px;
-  background-color: #00c3c6;
-}
-/*  */
-.list:hover {
-  transform: rotateX(5deg) rotateY(5deg); /* Нахил при наведенні */
-  box-shadow: 0 8px 16px rgba(3, 255, 255, 0.6); /* Яскравіша тінь */
-  background-color: rgba(0, 0, 0, 0.8); /* Трохи темніший фон */
-}
-.listItem a {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-/* ________________________ */
-.image-icon {
-  border-radius: 10%; /* Круглі іконки */
-  transition: transform 0 0.3s ease, box-shadow 0.3s ease; /* Анімація */
-}
-.image-icon img {
-  border-radius: 50%; /* Злегка закруглені кути */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  filter: grayscale(100%); /* Іконки чорно-білі за замовчуванням */
-  transition: filter 0.3s ease, transform 0.3s ease;
-  width: 36px; /* Фіксована ширина */
-  height: 36px; /* Фіксована висота */
-  transition: box-shadow 0.3s ease;
-}
-.image-icon img:hover {
-  transform: scale(1.1); /* Збільшення при наведенні */
-  filter: grayscale(0); /* Повернення кольору при наведенні */
-  transform: scale(1.2); /* Легке збільшення */
-  background-color: #00f9ff; /* Зелений фон при наведенні */
-  transform: scale(1.1); /* Збільшення при наведенні */
-  box-shadow: 1px 1px 20px 4px #00f9ff; /* Сильніша тінь при наведенні */
-}
-/*  */
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modalContent {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-.bottomSection {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: 20px;
-  border-top: 1px solid #555;
+  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.2);
 }
 
-.bottomSection a {
+/* Контейнер для тексту та кнопки */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Текстові елементи */
+.copyright,
+.policy {
+  color: #d4f0ff;
+  font-size: 0.9rem;
+}
+
+.policy a {
   color: #00c3c6;
   text-decoration: none;
 }
 
-.bottomSection a:hover {
+.policy a:hover {
   text-decoration: underline;
 }
-.p {
-  color: aliceblue;
 
-  font-size: 0.7rem;
+/* Кнопка на сторінку контактів */
+.contact-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  background-color: #00f9ff;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #00c3c6;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
 }

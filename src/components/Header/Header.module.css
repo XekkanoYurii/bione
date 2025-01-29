@@ -3,14 +3,11 @@
   align-items: center;
   display: flex;
   background-color: #000000; /* Чорний фон */
-  padding: 8px;
+  padding: 5px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 2px rgba(13, 116, 0, 0.5); /* Легка тінь під хедером */
-}
-img {
-  display: block;
+  box-shadow: 0 1px 10px rgba(0, 255, 255, 0.2); /* Космічний ефект */
 }
 
 /* Стиль для навігації */
@@ -33,17 +30,20 @@ img {
   position: relative;
   transition: color 0.3s ease;
 }
+
+/* Підсвічення активного пункту */
 .active {
-  color: #00c000; /* Підсвічування активного пункту */
+  color: #00c000;
   font-weight: bold;
 }
+
 /* Світіння при наведенні */
 .nav-item:hover {
   color: #7fef08;
   text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
 }
 
-/* Підсвічування підкреслення */
+/* Підкреслення при наведенні */
 .nav-item::after {
   content: "";
   position: absolute;
@@ -55,19 +55,21 @@ img {
   transition: width 0.3s ease;
 }
 
-/* Підкреслення при наведенні */
 .nav-item:hover::after {
   width: 100%;
 }
+
+/* Стилізація логотипу */
 .logo {
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffffdc; /* Наприклад, сірий або інший фон */
+  background-color: #ffffffdc;
 }
+
 .logo:hover .logo-img {
-  transform: scale(1.1); /* Збільшення при наведенні */
+  transform: scale(1.1);
   transition: transform 0.3s ease;
   background-color: #00c843;
   box-shadow: 0 2px 10px #00fbff;

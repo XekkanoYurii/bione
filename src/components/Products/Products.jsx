@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import NavigationButton from "../NavigationButton/NavigationButton";
 import styles from "./Products.module.css";
 
@@ -119,7 +119,7 @@ function Products() {
           </li>
         </ul>
       </div>
-      <NavigationButton direction="left" to="/about" />
+      <NavigationButton direction="left" to="/education" />
       <NavigationButton direction="right" to="/contacts" />
     </section>
   );

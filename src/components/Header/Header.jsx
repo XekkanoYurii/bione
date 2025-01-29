@@ -1,12 +1,28 @@
-import { Link, useLocation } from "react-router-dom"; // Додаємо useLocation
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import logo from "../ImagesComponents/logo.svg";
 import styles from "./Header.module.css";
 
 function Header() {
-  const location = useLocation(); // Отримуємо поточний шлях
+  const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Отримуємо лише перший сегмент шляху, щоб коректно підсвічувати секції
+  const currentSection = location.pathname.split("/")[1];
 
   return (
-    <header className={styles["header"]}>
+    <header
+      className={`${styles["header"]} ${scrolled ? styles.scrolled : ""}`}
+    >
       <Link to="/" className={styles["logo"]}>
         <img
           src={logo}
@@ -20,7 +36,7 @@ function Header() {
         <Link
           to="/"
           className={`${styles["nav-item"]} ${
-            location.pathname === "/" ? styles.active : ""
+            currentSection === "" ? styles.active : ""
           }`}
         >
           Home
@@ -29,31 +45,34 @@ function Header() {
         <Link
           to="/about"
           className={`${styles["nav-item"]} ${
-            location.pathname === "/about" ? styles.active : ""
+            currentSection === "about" ? styles.active : ""
           }`}
         >
           About
         </Link>
+
         <Link
           to="/education"
           className={`${styles["nav-item"]} ${
-            location.pathname === "/education" ? styles.active : ""
+            currentSection === "education" ? styles.active : ""
           }`}
         >
           Education
         </Link>
+
         <Link
           to="/products"
           className={`${styles["nav-item"]} ${
-            location.pathname === "/products" ? styles.active : ""
+            currentSection === "products" ? styles.active : ""
           }`}
         >
           Products
         </Link>
+
         <Link
           to="/contacts"
           className={`${styles["nav-item"]} ${
-            location.pathname === "/contacts" ? styles.active : ""
+            currentSection === "contacts" ? styles.active : ""
           }`}
         >
           Contacts
