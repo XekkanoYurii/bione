@@ -1,0 +1,49 @@
+/* Bubbles.module.css */
+.bubblesContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: floatAnimation 6s infinite ease-in-out;
+  pointer-events: all;
+}
+
+.bubble:hover {
+  transform: scale(1.2);
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -30px);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+  75% {
+    transform: translate(30px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
