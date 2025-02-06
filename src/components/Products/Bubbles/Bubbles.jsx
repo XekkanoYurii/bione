@@ -40,20 +40,23 @@ const Bubbles = () => {
       },
     },
     particles: {
-      number: { value: 20 },
+      number: { value: 40 }, // Збільшення кількості бульбашок
       shape: { type: "circle" },
       size: { value: 10, random: true },
       move: {
         enable: true,
         speed: 3,
         direction: "none",
-        random: true,
+        random: true, // Додаємо хаотичний рух
         straight: false,
         outModes: {
           default: "bounce",
         },
         attract: {
           enable: false,
+        },
+        collisions: {
+          enable: true, // Увімкнення зіткнень
         },
       },
       opacity: { value: 0.8 },
@@ -70,15 +73,17 @@ const Bubbles = () => {
       />
 
       <div className={styles.bubbles}>
-        {"AI 1,AI 2,AI 3,AI 4,AI 5".split(",").map((ai, index) => (
-          <div
-            key={index}
-            className={styles.bubble}
-            onClick={() => handleBubbleClick(`Інформація про ${ai}`)}
-          >
-            {ai}
-          </div>
-        ))}
+        {"AI 1,AI 2,AI 3,AI 4,AI 5,AI 6,AI 7,AI 8,AI 9,AI 10"
+          .split(",")
+          .map((ai, index) => (
+            <div
+              key={index}
+              className={styles.bubble}
+              onClick={() => handleBubbleClick(`Інформація про ${ai}`)}
+            >
+              {ai}
+            </div>
+          ))}
       </div>
 
       <BubblesModal
