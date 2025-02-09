@@ -1,5 +1,5 @@
 import styles from "./BubblesModal.module.css";
-import { IoIosArrowDown } from "react-icons/io"; // Іконки стрілок
+import { IoIosArrowUp } from "react-icons/io"; // Іконки стрілок (тепер вгору)
 import { FaExternalLinkAlt } from "react-icons/fa"; // Іконка для посилання
 
 const BubblesModal = ({ isOpen, content, onClose }) => {
@@ -7,7 +7,10 @@ const BubblesModal = ({ isOpen, content, onClose }) => {
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`${styles.modalContent} ${styles.slideDown}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Іконка чату */}
         <div className={styles.chatIcon}>
           <img src={content.img} alt={content.title} />
@@ -35,7 +38,7 @@ const BubblesModal = ({ isOpen, content, onClose }) => {
 
         {/* Кнопка закриття зі стрілками */}
         <div className={styles.closeButton} onClick={onClose}>
-          <IoIosArrowDown className={styles.arrow} />
+          <IoIosArrowUp className={styles.arrow} />
         </div>
       </div>
     </div>

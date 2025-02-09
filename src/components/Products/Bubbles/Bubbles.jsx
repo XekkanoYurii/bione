@@ -7,8 +7,7 @@ const bubblesData = [
     id: 1,
     title: "ChatGPT",
     description: "Штучний інтелект для тексту",
-    img: "/icons/chatgpt.png",
-    prompt1: "Напиши мені короткий пост про AI",
+    prompt1: "Напиши короткий пост про AI",
     prompt2: "Як використовувати ChatGPT для навчання?",
     link: "https://chat.openai.com",
   },
@@ -16,17 +15,15 @@ const bubblesData = [
     id: 2,
     title: "Custom AI",
     description: "Налаштовані AI моделі",
-    img: "/icons/custom-ai.png",
-    prompt1: "Створи AI, який допоможе у плануванні подорожей",
-    prompt2: "Як навчити AI відповідати на питання клієнтів?",
+    prompt1: "Створи AI для подорожей",
+    prompt2: "Як навчити AI відповідати на питання?",
     link: "https://customai.com",
   },
   {
     id: 3,
     title: "Analytics",
     description: "AI аналітика та прогнозування",
-    img: "/icons/analytics.png",
-    prompt1: "Які AI-інструменти краще для аналітики?",
+    prompt1: "Які AI-інструменти для аналітики?",
     prompt2: "Як аналізувати великі дані за допомогою AI?",
     link: "https://analyticsai.com",
   },
@@ -34,18 +31,15 @@ const bubblesData = [
     id: 4,
     title: "Bot Builder",
     description: "Конструктор AI ботів",
-    img: "/icons/bot-builder.png",
-    prompt1: "Як створити бота для підтримки клієнтів?",
-    prompt2: "Які фреймворки найкращі для AI ботів?",
+    prompt1: "Як створити AI-бота для підтримки?",
+    prompt2: "Які фреймворки кращі для AI ботів?",
     link: "https://botbuilder.com",
   },
 ];
 
-// Конфігурація руху
-const MAX_SPEED = 1;
-const MIN_RADIUS = 30;
-const MAX_RADIUS = 60;
-const COLLISION_DISTANCE = MAX_RADIUS * 1.5;
+const BUBBLE_SIZE = 70; // Усі бульбашки одного розміру
+const MAX_SPEED = 0.5;
+const COLLISION_DISTANCE = BUBBLE_SIZE * 1.2;
 
 const Bubbles = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -55,16 +49,14 @@ const Bubbles = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-
     const container = containerRef.current.getBoundingClientRect();
 
     const initialPositions = bubblesData.map(() => ({
-      x: Math.random() * (container.width - MAX_RADIUS * 2) + MAX_RADIUS,
-      y: Math.random() * (container.height - MAX_RADIUS * 2) + MAX_RADIUS,
+      x: Math.random() * (container.width - BUBBLE_SIZE) + BUBBLE_SIZE / 2,
+      y: Math.random() * (container.height - BUBBLE_SIZE) + BUBBLE_SIZE / 2,
       directionX: Math.random() > 0.5 ? 1 : -1,
       directionY: Math.random() > 0.5 ? 1 : -1,
       speed: Math.random() * (MAX_SPEED - 0.2) + 0.2,
-      radius: Math.random() * (MAX_RADIUS - MIN_RADIUS) + MIN_RADIUS,
     }));
 
     setPositions(initialPositions);
@@ -82,13 +74,15 @@ const Bubbles = () => {
           if (!containerRef.current) return pos;
           const container = containerRef.current.getBoundingClientRect();
 
-          // Відбиття від стінок контейнера
-          if (newY <= 0 || newY + pos.radius * 2 >= container.height)
+          if (newY <= 0 || newY + BUBBLE_SIZE >= container.height) {
             pos.directionY *= -1;
-          if (newX <= 0 || newX + pos.radius * 2 >= container.width)
+            newY = Math.max(0, Math.min(container.height - BUBBLE_SIZE, newY));
+          }
+          if (newX <= 0 || newX + BUBBLE_SIZE >= container.width) {
             pos.directionX *= -1;
+            newX = Math.max(0, Math.min(container.width - BUBBLE_SIZE, newX));
+          }
 
-          // Відштовхування між бульбашками
           prevPositions.forEach((other, otherIndex) => {
             if (index !== otherIndex) {
               const dx = newX - other.x;
@@ -135,11 +129,10 @@ const Bubbles = () => {
             style={{
               top: `${positions[index]?.y}px`,
               left: `${positions[index]?.x}px`,
-              width: `${positions[index]?.radius * 2}px`,
-              height: `${positions[index]?.radius * 2}px`,
+              width: `${BUBBLE_SIZE}px`,
+              height: `${BUBBLE_SIZE}px`,
             }}
           >
-            <img src={bubble.img} alt={bubble.title} />
             <span>{bubble.title}</span>
           </li>
         ))}

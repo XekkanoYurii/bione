@@ -7,97 +7,99 @@
   background: rgba(0, 0, 0, 0.6); /* Темний прозорий фон */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Починається зверху */
   z-index: 1000;
+  overflow: hidden;
 }
 
-.modalContent {
-  background: rgba(0, 0, 0, 0.9); /* Темніший фон */
-  border: 3px solid black; /* Чорний бордер */
-  padding: 30px;
-  border-radius: 15px;
-  width: 500px;
-  height: 400px;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-  color: white;
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Анімація плавної появи */
-@keyframes fadeIn {
+/* Анімація появи зверху */
+@keyframes slideDown {
   from {
-    transform: scale(0.8);
+    transform: translateY(-100%);
     opacity: 0;
   }
   to {
-    transform: scale(1);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
+.modalContent {
+  background: rgba(20, 20, 20, 0.95); /* Напівпрозорий темний фон */
+  border: 4px solid rgba(0, 255, 255, 0.7); /* Світлий бірюзовий бордер */
+  padding: 30px;
+  border-radius: 15px;
+  width: 520px;
+  height: 520px; /* Достатньо місця */
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4); /* Контрастна тінь */
+  color: white;
+  position: relative;
+  animation: slideDown 0.5s ease-out;
+}
+
 /* Іконка чату */
 .chatIcon img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid white;
-  margin-bottom: 10px;
+  border: 3px solid white;
+  margin-bottom: 15px;
 }
 
 /* Стиль опису */
 .description {
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
   color: #b0b0b0;
 }
 
 /* Стиль промптів */
 .prompts {
   text-align: left;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .prompts h3 {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 6px;
   color: #00ffff;
 }
 
 .prompts p {
-  font-size: 14px;
-  margin: 5px 0;
+  font-size: 15px;
+  margin: 6px 0;
 }
 
 /* Посилання */
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   color: #00ffcc;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .link:hover {
   color: #00ffaa;
+  transform: scale(1.05);
 }
 
-/* Стрілки для закриття */
+/* Стрілка для закриття */
 .closeButton {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
@@ -105,23 +107,20 @@
   border: none;
 }
 
+/* Стиль стрілки */
 .arrow {
-  font-size: 24px;
+  font-size: 40px; /* Велика стрілка */
   color: white;
-  animation: bounce 1s infinite;
+  animation: bounce 1s infinite ease-in-out;
 }
 
-/* Анімація стрибків стрілок */
+/* Анімація руху стрілки */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(5px);
+    transform: translateY(-7px); /* Стрілка піднімається */
   }
-}
-
-.arrow:nth-child(2) {
-  animation-delay: 0.2s; /* Друга стрілка має затримку */
 }
