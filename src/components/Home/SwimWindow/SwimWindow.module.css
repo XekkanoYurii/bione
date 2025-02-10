@@ -23,16 +23,41 @@
 /* Основне вікно */
 .swim-window {
   position: relative;
-  width: 50%; /* Ширина спливаючого вікна */
+  width: 50%;
   height: auto;
-  background: radial-gradient(circle, #001220, #000d1a, #000814);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.941),
-    inset 0 0 30px rgba(1, 251, 72, 0.2);
-  transform: translateX(100%); /* Початкове положення за межами екрану */
-  animation: slideIn 0.8s forwards ease-in-out; /* Плавна поява */
-  border: 1px solid #0077ff; /* Світиться рамка */
+  transform: translateX(100%);
+  animation: slideIn 0.8s forwards ease-in-out;
+  border: 2px solid #009dff61;
+
+  /* Фонове зображення */
+  background-image: url("/public/image/background.jpg");
+  background-size: cover; /* Розтягуємо на всю область */
+  background-position: center; /* Центруємо */
+  background-repeat: no-repeat;
+  /* Додаємо затемнення */
+  position: relative;
+  overflow: hidden;
+}
+/* Псевдоелемент для затемнення */
+.swim-window::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.683); /* Затемнення */
+  z-index: 1;
+}
+/* Контент поверх затемнення */
+.swim-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-family: "Arial", sans-serif;
 }
 /* Анімація виїзду */
 @keyframes slideIn {
@@ -40,17 +65,20 @@
     transform: translateX(0); /* Вікно в'їжджає на своє місце */
   }
 }
-/* Контент */
-.swim-content {
-  text-align: center;
-  color: white;
-  font-family: "Arial", sans-serif;
+/* Анімація закриття - повернення назад */
+@keyframes slideOut {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Додаємо ефект зникнення */
+.slide-out {
+  animation: slideOut 0.8s forwards ease-in-out;
 }
 /* Заголовок */
 .title {
-  color: #ffffff; /* Основний білий текст */
-  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff,
-    0 0 80px #0077ff; /* Ефект сяйва */
+  color: aliceblue; /* Основний білий текст */
   font-size: 2rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -61,7 +89,6 @@
   flex-direction: column;
   gap: 10px;
   border: 2px solid transparent;
-  box-shadow: 0 0 10px #0077ff, 0 0 20px #00d4ff; /* Світіння */
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 50px;
@@ -69,16 +96,12 @@
 .list-item {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  color: aliceblue;
 }
-/* Текст */
-.swim-content p {
-}
-/* Кнопка */
 /* Основна кнопка */
 .swim-button {
   background: transparent; /* Прозорий фон */
-  border: 2px solid #0077ff; /* Напівпрозора рамка */
+  border: 0.5px solid #0077ff; /* Напівпрозора рамка */
   border-radius: 30px; /* Округлі кути */
   padding: 12px 25px;
   font-size: 1.1rem;
@@ -98,10 +121,5 @@
 }
 /* Ефекти при наведенні */
 .swim-button:hover {
-  /* Ефект світіння */
-  box-shadow: 0 0 15px rgba(0, 255, 104, 0.8), 0 0 30px rgba(0, 255, 104, 1);
-
   background: linear-gradient(90deg, #0077ff, #00d4ff);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5); /* Інтенсивніше сяйво */
-  transform: scale(1.1);
 }

@@ -1,5 +1,5 @@
 .runningContainer {
-  width: 100vw; /* Повна ширина */
+  width: 100%; /* Повна ширина */
   height: 150px; /* Фіксована висота */
   overflow: hidden;
   background: rgb(0, 0, 0); /* Темний фон */
