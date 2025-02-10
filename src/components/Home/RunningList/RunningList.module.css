@@ -1,0 +1,44 @@
+.runningContainer {
+  width: 100vw; /* Повна ширина */
+  height: 150px; /* Фіксована висота */
+  overflow: hidden;
+  background: rgb(0, 0, 0); /* Темний фон */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Створюємо безперервний рух */
+.marquee {
+  display: flex;
+  width: 200%; /* Подвоєна ширина */
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+/* Список, що повторюється */
+.runningList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 50px; /* Відстань між елементами */
+}
+
+/* Стилізація тексту */
+.runningList li {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Анімація для плавного руху */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%); /* Плавний безшовний ефект */
+  }
+}

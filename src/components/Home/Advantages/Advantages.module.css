@@ -4,29 +4,22 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  border-radius: 15px;
+  width: 100%;
   margin: 0 auto;
   transition: background-color 0.3s ease;
-}
-/* Фон для всього списку при наведенні */
-.advantages-section.list-hovered {
-  background-color: rgba(0, 0, 0, 0.9);
 }
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 30px;
   text-transform: uppercase;
-}
-span {
-  color: #00ff00;
+  color: linear-gradient(90deg, #ffffff, #18ffff);
+  padding: 50px 0;
 }
 .advantages-list {
   list-style: none;
   display: flex; /* В один рядок */
   justify-content: space-between; /* Рівномірний розподіл */
   gap: 20px; /* Проміжки між елементами */
-  padding: 0;
 }
 .advantage-item {
   flex: 1 1 22%; /* Встановлюємо ширину для кожного елемента */
@@ -43,7 +36,6 @@ span {
 .advantage-item:hover {
   transform: scale(1.1); /* Збільшення елемента */
   border-color: #00f1f5; /* Зміна кольору рамки */
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6); /* Світіння рамки */
 }
 /* Стиль для контейнера кожного блоку переваг */
 .advantage-container {

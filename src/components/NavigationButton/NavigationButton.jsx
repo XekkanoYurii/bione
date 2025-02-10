@@ -4,14 +4,19 @@ import styles from "./NavigationButton.module.css";
 function NavigationButton({ direction, to }) {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate(to);
+    window.scrollTo({ top: 0, behavior: "instant" }); // Моментальне повернення вгору
+  };
+
   return (
     <button
-      className={`${styles["nav-button"]} ${
-        direction === "left" ? styles["left"] : styles["right"]
+      className={`${styles.navButton} ${
+        direction === "left" ? styles.left : styles.right
       }`}
-      onClick={() => navigate(to)}
+      onClick={handleClick}
     >
-      {direction === "left" ? "←" : "→"}
+      <span className={styles.arrow}>{direction === "left" ? "⏴" : "⏵"}</span>
     </button>
   );
 }

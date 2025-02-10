@@ -39,7 +39,7 @@ const bubblesData = [
 
 const BUBBLE_SIZE = 70; // Усі бульбашки одного розміру
 const MAX_SPEED = 0.5;
-const COLLISION_DISTANCE = BUBBLE_SIZE * 1.2;
+const COLLISION_DISTANCE = BUBBLE_SIZE * 1;
 
 const Bubbles = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -119,32 +119,33 @@ const Bubbles = () => {
   };
 
   return (
-    <div className={styles.bubblesContainer} ref={containerRef}>
-      <ul className={styles.bubblesList}>
-        {bubblesData.map((bubble, index) => (
-          <li
-            key={bubble.id}
-            className={styles.bubble}
-            onClick={() => handleBubbleClick(bubble.id)}
-            style={{
-              top: `${positions[index]?.y}px`,
-              left: `${positions[index]?.x}px`,
-              width: `${BUBBLE_SIZE}px`,
-              height: `${BUBBLE_SIZE}px`,
-            }}
-          >
-            <span>{bubble.title}</span>
-          </li>
-        ))}
-      </ul>
-
-      {modalOpen && selectedBubble && (
-        <BubblesModal
-          isOpen={modalOpen}
-          content={selectedBubble}
-          onClose={handleCloseModal}
-        />
-      )}
+    <div className={styles.blackFon}>
+      <div className={styles.bubblesContainer} ref={containerRef}>
+        <ul className={styles.bubblesList}>
+          {bubblesData.map((bubble, index) => (
+            <li
+              key={bubble.id}
+              className={styles.bubble}
+              onClick={() => handleBubbleClick(bubble.id)}
+              style={{
+                top: `${positions[index]?.y}px`,
+                left: `${positions[index]?.x}px`,
+                width: `${BUBBLE_SIZE}px`,
+                height: `${BUBBLE_SIZE}px`,
+              }}
+            >
+              <span>{bubble.title}</span>
+            </li>
+          ))}
+        </ul>
+        {modalOpen && selectedBubble && (
+          <BubblesModal
+            isOpen={modalOpen}
+            content={selectedBubble}
+            onClose={handleCloseModal}
+          />
+        )}
+      </div>
     </div>
   );
 };

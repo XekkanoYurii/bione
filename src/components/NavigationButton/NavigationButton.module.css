@@ -1,32 +1,40 @@
-.nav-button {
+.navButton {
   position: fixed;
-  top: 50%; /* Центруємо по вертикалі */
-  transform: translateY(-50%); /* Вирівнюємо по центру вертикально */
-  width: 40px; /* Збільшений розмір для кращої взаємодії */
-  height: 40px;
-  border-radius: 10%; /* Робимо кнопки круглими */
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: #00fbff85;
-  color: black;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; /* Збільшений розмір */
+  height: 50px;
+  background: transparent; /* Прозорий фон */
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Стиль для ховера */
-.nav-button:hover {
-  background-color: black;
-  color: #00ff00;
-  box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
+.navButton:hover {
+  transform: translateY(-50%) scale(1.3); /* Збільшення при наведенні */
+}
+
+/* Стиль стрілок */
+.arrow {
+  font-size: 40px; /* Розмір стрілки */
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Ефект ховера для стрілок */
+.navButton:hover .arrow {
+  color: #00ffcc;
 }
 
 /* Кнопка зліва */
 .left {
-  left: 0; /* Притискаємо до лівого краю */
+  left: 10px;
 }
 
 /* Кнопка справа */
 .right {
-  right: 0; /* Притискаємо до правого краю */
+  right: 10px;
 }

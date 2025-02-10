@@ -41,16 +41,17 @@
 }
 /* Заголовок */
 .education-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  text-align: center; /* Вирівнювання тексту */
+  font-size: 2.5rem; /* Збільшений розмір шрифту */
   text-transform: uppercase;
-  color: #00eaff;
-  background: linear-gradient(90deg, #00eaff, #00ffcc);
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: aqua;
+  background: linear-gradient(90deg, #ffffff, #18ffff);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; /* Прозорий текст із градієнтом */
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  margin-bottom: 15px;
 }
 /* Опис */
 .education-text {

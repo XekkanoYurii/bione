@@ -1,9 +1,8 @@
 /* Загальний стиль футера */
 .footer {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0);
   padding: 15px 0;
   text-align: center;
-  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.2);
 }
 
 /* Контейнер для тексту та кнопки */
@@ -28,22 +27,4 @@
 
 .policy a:hover {
   text-decoration: underline;
-}
-
-/* Кнопка на сторінку контактів */
-.contact-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000;
-  background-color: #00f9ff;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-.contact-btn:hover {
-  background-color: #00c3c6;
-  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
 }

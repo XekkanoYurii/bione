@@ -1,7 +1,7 @@
 .bubblesContainer {
   width: 80%;
+  margin: 0 auto;
   height: 60vh;
-  margin: 50px auto;
   position: relative;
   border: 3px solid rgba(0, 255, 255, 0.8);
   border-radius: 20px;
@@ -9,7 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(50, 50, 50, 0.4); /* Темно-сірий прозорий фон */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Легка затемненість, щоб контент не зливався */
+  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.3); /* Світловий ефект */
 }
 
 .bubblesList {
