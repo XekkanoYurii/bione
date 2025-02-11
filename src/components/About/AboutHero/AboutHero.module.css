@@ -1,0 +1,94 @@
+.about-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/public/ImageComponents/AI-Webpage1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 5%;
+  color: white;
+}
+
+/* Затемнення фону */
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+/* Контент поверх затемнення */
+.about-container h2,
+.about-container ul {
+  position: relative;
+  z-index: 2;
+}
+/* Заголовок */
+.about-title-h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 100px;
+  color: #00ff99;
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+}
+/* Список з параграфами (дві колонки) */
+.about-list {
+  display: flex;
+  justify-content: space-between; /* Розташування елементів по боках */
+  gap: 350px;
+  width: 100%;
+  max-width: 1200px;
+  list-style: none;
+  padding-bottom: 100px;
+}
+/* Окремий елемент списку */
+.about-item {
+  flex: 1; /* Два рівні блоки */
+  max-width: 600px;
+}
+/* Текст у списку */
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+/* Список з питаннями */
+.list-ask {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+  list-style: none;
+}
+/* Окремий пункт питання */
+.ask-item {
+  font-size: 1.2rem;
+  flex: 1;
+  padding: 12px 20px;
+  background: rgba(0, 255, 153, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgba(0, 255, 153, 0.5);
+}
+/* Ефект при наведенні */
+.ask-item:hover {
+  background: rgba(0, 255, 153, 0.5);
+  transform: scale(1.1);
+  cursor: pointer;
+}

@@ -1,9 +1,6 @@
 import styles from "./LearnNext.module.css";
-import { useNavigate } from "react-router-dom";
 
 const LearnNext = () => {
-  const navigate = useNavigate();
-
   return (
     <section className={styles["learn-next-section"]}>
       <div className={styles["content"]}>
@@ -11,12 +8,9 @@ const LearnNext = () => {
           Ми використовуємо передові AI-технології для оптимізації процесів,
           аналітики та автоматизації. Долучайтеся до світу інновацій сьогодні!
         </p>
-        <button
-          className={styles["learn-button"]}
-          onClick={() => navigate("/education")}
-        >
+        <a href="/education" className={styles["learn-button"]}>
           Дізнатися більше
-        </button>
+        </a>
       </div>
     </section>
   );

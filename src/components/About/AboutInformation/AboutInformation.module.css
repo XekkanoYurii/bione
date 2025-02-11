@@ -1,4 +1,4 @@
-/* Списки */
+/* Основний контейнер */
 .lists-container {
   display: flex;
   flex-direction: column;
@@ -6,29 +6,39 @@
   width: 100%;
   margin: 0 auto;
   background-color: #000000;
+  padding: 50px 0;
 }
+
+/* Заголовок "Розділи" */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #00ff99;
+  text-shadow: 0 0 15px rgba(0, 255, 153, 0.8);
+  margin-bottom: 50px;
+}
+
+/* Секції */
 .section-container {
-  align-items: center; /* Центруємо елементи по вертикалі */
-  justify-content: space-between; /* Розташування елементів зліва/справа */
+  align-items: center;
+  justify-content: space-between;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
+  padding: 40px 0;
   background-color: #000000;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .section-title-h3 {
-  padding-top: 20px;
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
-  background: linear-gradient(90deg, #ffffff, #79e8ab); /* Градієнт */
-  -webkit-background-clip: text; /* Прив'язка градієнта до тексту */
-  background-clip: text;
-  -webkit-text-fill-color: transparent; /* Прозорий фон для тексту */
-  margin-bottom: 50px;
+  color: #79e8ab;
+  margin-bottom: 30px;
 }
-/*  */
-/* Контейнер загального контенту */
+
+/* Контент */
 .content {
   width: 1000px;
   margin: 0 auto;
@@ -39,7 +49,7 @@
   flex-wrap: wrap;
 }
 
-/* Ліва колонка (список) */
+/* Ліва і права колонка */
 .list-left,
 .list-right {
   width: 600px;
@@ -54,7 +64,7 @@
   text-align: right;
 }
 
-/* Оформлення списку */
+/* Текст списків */
 .list-item {
   font-size: 1.2rem;
   line-height: 1.4;
@@ -62,26 +72,26 @@
   text-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
 }
 
-/* Виділення ключових слів */
-.span {
-  color: rgb(103, 192, 255);
-  font-weight: bold;
+/* Анімація появи секцій */
+.section-container {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
-/* Загальний стиль контейнера зображення */
+.section-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Зображення */
 .img-container {
   width: 350px;
   height: 350px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-
   border-radius: 20px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Фон для секції "Про наш портал" */
