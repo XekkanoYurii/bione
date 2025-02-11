@@ -47,9 +47,6 @@ a {
   color: inherit; /* Зберігає поточний колір тексту */
   transition: color 0.2s ease;
 }
-a:hover {
-  color: #00ffcc; /* Зміна кольору при наведенні */
-}
 /*  */
 h2 {
   font-size: 36px;

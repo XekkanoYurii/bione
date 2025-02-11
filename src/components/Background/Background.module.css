@@ -6,6 +6,6 @@
   height: 100%;
   z-index: -1; /* Зробити фон позаду контенту */
   background: linear-gradient(rgba(7, 103, 127, 0.155), rgba(0, 0, 0, 0.3)),
-    url("../ImagesComponents/background/planet.jpg") center/cover no-repeat;
+    url("/public/ImageComponents/background/planet.jpg") center/cover no-repeat;
   background-attachment: fixed; /* Фіксований бекграунд */
 }

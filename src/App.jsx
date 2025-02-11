@@ -7,12 +7,14 @@ import Education from "./components/Education/Education";
 import Products from "./components/Products/Products";
 import Contacts from "./components/Contacts/Contacts";
 import Background from "./components/Background/Background";
+import ReportBugButton from "./components/ReportBugButton/ReportBugButton";
 
 function App() {
   return (
     <Router>
       <Background />
       <Header />
+      <ReportBugButton />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

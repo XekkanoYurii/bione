@@ -1,0 +1,55 @@
+/* Контейнер для кнопки та підказки */
+.report-container {
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+/* Підказка, що з'являється при наведенні */
+.tooltip {
+  background: aliceblue;
+  color: black;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  margin-bottom: 5px;
+  opacity: 0;
+  transform: translateX(10px);
+  animation: fadeIn 0.3s forwards ease-in-out;
+}
+
+/* Анімація появи підказки */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Кнопка */
+.report-button {
+  background: #4caf50;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ефект при наведенні */
+.report-button:hover {
+  background: #ff3333;
+  color: black;
+}

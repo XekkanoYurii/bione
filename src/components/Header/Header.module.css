@@ -8,7 +8,6 @@
   top: 0;
   z-index: 1000;
 }
-
 /* Стиль для навігації */
 .nav {
   display: flex;
@@ -18,7 +17,6 @@
   margin-right: auto;
   gap: 30px; /* Відстань між пунктами */
 }
-
 /* Базовий стиль для посилань */
 .nav-item {
   font-size: 1.2rem;
@@ -29,19 +27,11 @@
   position: relative;
   transition: color 0.3s ease;
 }
-
 /* Підсвічення активного пункту */
 .active {
   color: #00c000;
   font-weight: bold;
 }
-
-/* Світіння при наведенні */
-.nav-item:hover {
-  color: #7fef08;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
-}
-
 /* Підкреслення при наведенні */
 .nav-item::after {
   content: "";
@@ -50,14 +40,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #00ffcc;
+  background-color: #00c000;
   transition: width 0.3s ease;
 }
-
 .nav-item:hover::after {
   width: 100%;
 }
-
 /* Стилізація логотипу */
 .logo {
   border-radius: 50%;

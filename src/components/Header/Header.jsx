@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../ImagesComponents/logo.svg";
+import logo from "/public/ImageComponents/logo.svg";
 import styles from "./Header.module.css";
 
 function Header() {

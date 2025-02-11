@@ -1,0 +1,70 @@
+/* Контейнер секції */
+.learn-next-section {
+  width: 100%;
+  height: 400px; /* Висота секції */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Потрібно для псевдоелемента */
+  background-image: url("/public/ImageComponents/AI-Webpage1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Додаємо затемнення та блюр через псевдоелемент */
+.learn-next-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.578); /* Затемнення */
+  backdrop-filter: blur(4px); /* Ефект блюру */
+  -webkit-backdrop-filter: blur(4px); /* Для підтримки Safari */
+  z-index: 1;
+}
+
+/* Вміст секції має бути поверх затемнення */
+.learn-next-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Контент */
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
+/* Текст */
+.description {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+/* Кнопка */
+.learn-button {
+  background: transparent;
+  border: 2px solid #00ff99;
+  color: #00ff99;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+.learn-button:hover {
+  background: #00ff99;
+  color: black;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.8);
+  transform: scale(1.1);
+}
