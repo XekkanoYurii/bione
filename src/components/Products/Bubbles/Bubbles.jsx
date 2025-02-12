@@ -119,13 +119,13 @@ const Bubbles = () => {
   };
 
   return (
-    <div className={styles.blackFon}>
-      <div className={styles.bubblesContainer} ref={containerRef}>
-        <ul className={styles.bubblesList}>
+    <div className={styles["blackFon"]}>
+      <div className={styles["bubblesContainer"]} ref={containerRef}>
+        <ul className={styles["bubblesList"]}>
           {bubblesData.map((bubble, index) => (
             <li
               key={bubble.id}
-              className={styles.bubble}
+              className={styles["bubble"]}
               onClick={() => handleBubbleClick(bubble.id)}
               style={{
                 top: `${positions[index]?.y}px`,

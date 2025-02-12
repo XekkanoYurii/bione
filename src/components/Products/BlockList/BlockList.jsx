@@ -5,42 +5,42 @@ function BlockList() {
   const blocks = [
     {
       title: "Перше користування",
-      path: "/education/first-use", // 🔹 Було "/about/first-use"
+      path: "/products/first-use", // 🔹 Було "/about/first-use"
       image: "./BlockImg/1.jpg",
     },
     {
       title: "Наша екосистема",
-      path: "/education/ecosystem",
+      path: "/products/ecosystem",
       image: "./BlockImg/2.jpg",
     },
     {
       title: "Криптовалюти",
-      path: "/education/crypto",
+      path: "/products/crypto",
       image: "./BlockImg/3.jpg",
     },
     {
       title: "Костомні чати",
-      path: "/education/custom-gpt",
+      path: "/products/custom-gpt",
       image: "./BlockImg/4.jpg",
     },
     {
       title: "Анонімний режим",
-      path: "/education/anonimus",
+      path: "/products/anonimus",
       image: "./BlockImg/5.jpg",
     },
     {
       title: "Крипто монети",
-      path: "/education/coins",
+      path: "/products/coins",
       image: "./BlockImg/6.jpg",
     },
     {
       title: "Чат",
-      path: "/education/chat-gpt",
+      path: "/products/chat-gpt",
       image: "./BlockImg/7.jpg",
     },
     {
       title: "Обміники",
-      path: "/education/change",
+      path: "/products/change",
       image: "./BlockImg/8.jpg",
     },
   ];

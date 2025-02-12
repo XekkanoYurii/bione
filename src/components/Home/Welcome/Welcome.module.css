@@ -5,6 +5,7 @@
   height: 100vh;
   overflow: hidden; /* Приховує вихідні межі зображення */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-end; /* Розташовує текст внизу */
   /* Додаткові стилі */
@@ -33,7 +34,6 @@
   animation: slide-in-left 1.5s ease-out forwards; /* Анімація появи зліва */
   opacity: 0; /* Початково прихований */
   transform: translateX(-50px); /* Початкове зміщення вліво */
-  margin: 0; /* Забираємо зайві відступи */
   position: absolute; /* Розташування відносно контейнера */
   top: 10%; /* Розташування у верхній частині секції */
   left: 50%; /* Центрування горизонтально */
@@ -63,12 +63,11 @@
   width: 100%;
   justify-content: space-between;
   text-align: center; /* Розташування текстів вертикально */
-  padding: 0;
+  padding-top: 200px;
 }
 /* Елементи тексту */
 .text-item {
   margin: 0 5px;
-  margin-bottom: 270px;
   width: 350px;
   font-size: 1.6rem; /* Розмір тексту */
   font-weight: bold; /* Жирний текст */

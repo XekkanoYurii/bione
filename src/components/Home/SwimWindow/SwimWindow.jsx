@@ -28,13 +28,12 @@ const SwimWindow = () => {
   }, [isVisible]);
 
   const handleClose = () => {
-    setClosing(true); // Запускаємо анімацію закриття
-
+    setClosing(true); // Запускаємо анімацію зникнення
     setTimeout(() => {
       setIsVisible(false);
       setClosing(false);
       sessionStorage.setItem("hasClosedSwimWindow", "true");
-    }); // Час збігається з анімацією
+    }, 500); // Час збігається з анімацією
   };
 
   if (!isVisible) return null;
@@ -47,7 +46,7 @@ const SwimWindow = () => {
     >
       <div
         className={`${styles["swim-window"]} ${
-          closing ? styles["slide-out"] : ""
+          closing ? styles["fade-out-window"] : ""
         }`}
       >
         <div className={styles["swim-content"]}>

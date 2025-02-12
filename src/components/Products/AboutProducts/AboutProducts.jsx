@@ -12,6 +12,23 @@ const AboutProducts = () => {
         перегляньте <span>приклади промптів</span> та оберіть той, що вам
         підходить! 🚀
       </p>
+
+      <div className={styles["buttons-container"]}>
+        <div className={styles["button-group"]}>
+          <p className={styles["button-text"]}>
+            Оберіть для себе кастомний чат
+          </p>
+          <a href="#bubbles" className={styles["button-link"]}>
+            Обрати
+          </a>
+        </div>
+        <div className={styles["button-group"]}>
+          <p className={styles["button-text"]}>Вперше використовуєте чат?</p>
+          <a href="#education" className={styles["button-link"]}>
+            Вчитись
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

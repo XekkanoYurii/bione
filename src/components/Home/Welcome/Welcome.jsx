@@ -1,3 +1,4 @@
+import ButtonsFolow from "../ButtonsFolow/ButtonsFolow";
 import styles from "./Welcome.module.css";
 
 function WelcomeSection() {
@@ -11,6 +12,7 @@ function WelcomeSection() {
           </li>
           <li className={styles["text-item"]}>Майбутнє починається з BiOne</li>
         </ul>
+        <ButtonsFolow />
       </div>
     </div>
   );

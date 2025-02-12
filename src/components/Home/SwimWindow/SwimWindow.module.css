@@ -5,121 +5,111 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.71); /* Прозорий чорний фон */
-  z-index: 1000; /* Поверх всього */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
   display: flex;
-  justify-content: center; /* Початкова позиція справа */
+  justify-content: center;
   align-items: center;
-  overflow: hidden; /* Блокуємо прокрутку фону */
-  opacity: 0; /* Початково прозоре */
-  animation: fadeIn 0.5s forwards ease-in-out; /* Плавна поява */
+  opacity: 0;
+  animation: fadeIn 0.5s forwards ease-in-out;
 }
+
+/* Основне вікно */
+.swim-window {
+  position: relative;
+  width: 50%;
+  height: auto;
+  background: radial-gradient(circle, #001220, #000d1a, #000814);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.941),
+    inset 0 0 30px rgba(1, 251, 72, 0.2);
+  opacity: 0;
+  animation: fadeInWindow 0.5s forwards ease-in-out;
+}
+
 /* Анімація прозорості */
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
-/* Основне вікно */
-.swim-window {
-  position: relative;
-  width: 50%;
-  height: auto;
-  padding: 30px;
-  border-radius: 15px;
-  transform: translateX(100%);
-  animation: slideIn 0.8s forwards ease-in-out;
-  border: 2px solid #009dff61;
 
-  /* Фонове зображення */
-  background-image: url("/public/image/background.jpg");
-  background-size: cover; /* Розтягуємо на всю область */
-  background-position: center; /* Центруємо */
-  background-repeat: no-repeat;
-  /* Додаємо затемнення */
-  position: relative;
-  overflow: hidden;
+@keyframes fadeInWindow {
+  to {
+    opacity: 1;
+  }
 }
-/* Псевдоелемент для затемнення */
-.swim-window::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.683); /* Затемнення */
-  z-index: 1;
+
+/* Анімація зникнення */
+.fade-out {
+  animation: fadeOut 0.5s forwards ease-in-out;
 }
-/* Контент поверх затемнення */
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Анімація зникнення вікна */
+.fade-out-window {
+  animation: fadeOutWindow 0.5s forwards ease-in-out;
+}
+
+@keyframes fadeOutWindow {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Контент */
 .swim-content {
-  position: relative;
-  z-index: 2;
   text-align: center;
   color: white;
   font-family: "Arial", sans-serif;
 }
-/* Анімація виїзду */
-@keyframes slideIn {
-  to {
-    transform: translateX(0); /* Вікно в'їжджає на своє місце */
-  }
-}
-/* Анімація закриття - повернення назад */
-@keyframes slideOut {
-  to {
-    transform: translateX(100%);
-  }
-}
 
-/* Додаємо ефект зникнення */
-.slide-out {
-  animation: slideOut 0.8s forwards ease-in-out;
-}
 /* Заголовок */
 .title {
-  color: aliceblue; /* Основний білий текст */
+  color: aliceblue;
   font-size: 2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
+
+/* Список */
 .list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 2px solid transparent;
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 50px;
 }
+
 .list-item {
   font-size: 1.2rem;
-  margin-bottom: 20px;
   color: aliceblue;
 }
-/* Основна кнопка */
+
+/* Кнопка */
 .swim-button {
-  background: transparent; /* Прозорий фон */
-  border: 0.5px solid #0077ff; /* Напівпрозора рамка */
-  border-radius: 30px; /* Округлі кути */
+  background: transparent;
+  border: 0.5px solid #0077ff;
+  border-radius: 30px;
   padding: 12px 25px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
-  /*  */
-  background: linear-gradient(
-    90deg,
-    #4b0082,
-    #0b3d91,
-    #001f54
-  ); /* Градієнт кнопки */
+  background: linear-gradient(90deg, #4b0082, #0b3d91, #001f54);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3); /* Сяйво */
-  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3);
 }
-/* Ефекти при наведенні */
+
 .swim-button:hover {
   background: linear-gradient(90deg, #0077ff, #00d4ff);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+  transform: scale(1.1);
 }

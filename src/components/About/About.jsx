@@ -11,7 +11,7 @@ function About() {
       <RunningList />
       <AboutInformation />
       <NavigationButton direction="left" to="/" />
-      <NavigationButton direction="right" to="/education" />
+      <NavigationButton direction="right" to="/products" />
     </section>
   );
 }

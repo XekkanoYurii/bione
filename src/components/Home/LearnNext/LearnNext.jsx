@@ -8,7 +8,7 @@ const LearnNext = () => {
           Ми використовуємо передові AI-технології для оптимізації процесів,
           аналітики та автоматизації. Долучайтеся до світу інновацій сьогодні!
         </p>
-        <a href="/education" className={styles["learn-button"]}>
+        <a href="/products" className={styles["learn-button"]}>
           Дізнатися більше
         </a>
       </div>

@@ -1,0 +1,53 @@
+/* Контейнер кнопок */
+.buttons-container {
+  display: flex;
+  justify-content: space-between; /* Максимальна відстань між кнопками */
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Контроль максимальної ширини */
+  margin: 0 auto;
+  position: relative;
+  padding-top: 200px;
+}
+
+/* Обгортка для кнопки (щоб вмістити підказку) */
+.button-wrapper {
+  position: relative;
+}
+
+/* Стилі кнопок */
+.button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  background: linear-gradient(90deg, #0077ff, #00d4ff);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2);
+}
+
+/* Підказка */
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards ease-in-out;
+}
+
+/* Анімація підказки */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

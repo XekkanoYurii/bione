@@ -41,7 +41,6 @@ function Header() {
         >
           Home
         </Link>
-
         <Link
           to="/about"
           className={`${styles["nav-item"]} ${
@@ -50,16 +49,6 @@ function Header() {
         >
           About
         </Link>
-
-        <Link
-          to="/education"
-          className={`${styles["nav-item"]} ${
-            currentSection === "education" ? styles.active : ""
-          }`}
-        >
-          Education
-        </Link>
-
         <Link
           to="/products"
           className={`${styles["nav-item"]} ${
@@ -68,7 +57,6 @@ function Header() {
         >
           Products
         </Link>
-
         <Link
           to="/contacts"
           className={`${styles["nav-item"]} ${
