@@ -5,7 +5,7 @@ function BlockList() {
   const blocks = [
     {
       title: "Перше користування",
-      path: "/products/first-use", // 🔹 Було "/about/first-use"
+      path: "/products/first-use",
       image: "./BlockImg/1.jpg",
     },
     {
