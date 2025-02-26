@@ -3,7 +3,6 @@ import AboutProducts from "./AboutProducts/AboutProducts";
 import Bubbles from "./Bubbles/Bubbles";
 import EducationHero from "./EducationHero/EducationHero";
 import BlockList from "./BlockList/BlockList";
-import NavigationButton from "../NavigationButton/NavigationButton";
 
 // Імпортуємо підсторінки
 import FirstUse from "./BlockList/Blocks/FirstUse";
@@ -50,9 +49,6 @@ function Products() {
           <Route path="change" element={<Change />} />
         </Routes>
       </div>
-
-      <NavigationButton direction="left" to="/about" />
-      <NavigationButton direction="right" to="/contacts" />
     </section>
   );
 }

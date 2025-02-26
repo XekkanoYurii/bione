@@ -73,9 +73,7 @@ const FirstUse = () => {
         />
 
         {/* КРОК 5 */}
-        <p className={styles["first-use-text"]}>
-          ✍️ <strong>Крок 5:</strong> Якщо ви створюєте новий акаунт, введіть:
-        </p>
+        <p className={styles["first-use-text"]}></p>
         <img
           className={styles["first-use-image"]}
           src="/public/BlockImg/FirtstUSe/firstUse-5.jpg"

@@ -1,4 +1,3 @@
-import NavigationButton from "../NavigationButton/NavigationButton";
 import styles from "./Contacts.module.css";
 
 function Contacts() {
@@ -10,7 +9,6 @@ function Contacts() {
         <li>lalalal</li>
         <li>lalala</li>
       </ul>
-      <NavigationButton direction="left" to="/products" />
     </section>
   );
 }

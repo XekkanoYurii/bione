@@ -1,21 +1,15 @@
 .bubblesContainer {
-  width: 80%;
-  margin: 0 auto;
-  height: 60vh;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  border: 3px solid rgba(0, 255, 255, 0.8);
-  border-radius: 20px;
+  border: 2px solid rgba(50, 50, 50, 0.9); /* Темна, але виділена рамка */
+  border-radius: 0; /* Відсутність заокруглення */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.2
-  ); /* Легка затемненість, щоб контент не зливався */
-  box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.3); /* Світловий ефект */
+  background: #0a0a0a; /* Чистий темний фон */
+  box-shadow: none; /* Прибираємо світловий ефект */
 }
 
 .bubblesList {
@@ -30,15 +24,15 @@
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: rgba(40, 40, 40, 0.5); /* Прозорий темно-сірий */
+  background: rgba(50, 50, 50, 0.7); /* Трохи світліший сірий */
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   color: white;
   cursor: pointer;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5),
-    inset 0 0 20px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5); /* Внутрішня іскра */
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2),
+    inset 0 0 10px rgba(100, 100, 100, 0.4), 0 0 5px rgba(100, 100, 100, 0.4);
   transition: transform 0.2s ease-in-out;
   padding: 5px;
   text-align: center;
@@ -48,11 +42,11 @@
 
 .bubble span {
   max-width: 90%;
-  font-size: clamp(10px, 2.2vw, 14px); /* Автоматичне підлаштування */
+  font-size: clamp(10px, 2vw, 14px);
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
-  white-space: normal; /* Тепер текст буде переноситись */
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  white-space: normal;
   word-wrap: break-word;
   display: block;
   text-align: center;
@@ -60,6 +54,6 @@
 
 .bubble:hover {
   transform: scale(1.1);
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.7),
-    inset 0 0 30px rgba(0, 255, 255, 0.7), 0 0 25px rgba(0, 255, 255, 1);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+    inset 0 0 15px rgba(150, 150, 150, 0.5), 0 0 10px rgba(100, 100, 100, 0.3);
 }

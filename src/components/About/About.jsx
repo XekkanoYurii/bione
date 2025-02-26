@@ -1,4 +1,3 @@
-import NavigationButton from "../NavigationButton/NavigationButton";
 import RunningList from "../Home/RunningList/RunningList";
 import AboutHero from "./AboutHero/AboutHero";
 import AboutInformation from "./AboutInformation/AboutInformation";
@@ -10,8 +9,6 @@ function About() {
       <AboutHero />
       <RunningList />
       <AboutInformation />
-      <NavigationButton direction="left" to="/" />
-      <NavigationButton direction="right" to="/products" />
     </section>
   );
 }
