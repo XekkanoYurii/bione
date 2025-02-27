@@ -7,18 +7,19 @@ import Products from "./components/Products/Products";
 import Contacts from "./components/Contacts/Contacts";
 import Background from "./components/Background/Background";
 import ReportBugButton from "./components/ReportBugButton/ReportBugButton";
+import ScrollToTop from "./components/ScrollTop/ScrollToTop"; // Підключаємо
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Додаємо тут */}
       <Background />
       <Header />
       <ReportBugButton />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products/*" element={<Products />} />{" "}
-          {/* Додано "*" для вкладених маршрутів */}
+          <Route path="/products/*" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
