@@ -5,7 +5,6 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Products from "./components/Products/Products";
 import Contacts from "./components/Contacts/Contacts";
-import Background from "./components/Background/Background";
 import ReportBugButton from "./components/ReportBugButton/ReportBugButton";
 import ScrollToTop from "./components/ScrollTop/ScrollToTop"; // Підключаємо
 
@@ -13,7 +12,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop /> {/* Додаємо тут */}
-      <Background />
       <Header />
       <ReportBugButton />
       <main>

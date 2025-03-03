@@ -1,0 +1,68 @@
+/* Основний контейнер (повна ширина) */
+.about-portal-container {
+  width: 100%;
+  background: linear-gradient(135deg, #121212, #1e1e1e); /* Градієнтний фон */
+  padding: 80px 0; /* Збільшив відступи */
+  display: flex;
+  justify-content: center;
+}
+
+/* Внутрішній блок */
+.about-portal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  gap: 60px; /* Збільшив простір між елементами */
+}
+
+/* Блок із зображенням */
+.about-portal-image {
+  flex: 1;
+  background: url("/public/AboutImage/aboutImage.jpg") center/cover no-repeat;
+  min-height: 400px; /* Витягнув блок по висоті */
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 255, 204, 0.2); /* Додав тінь */
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-portal-image:hover {
+  transform: scale(1.05); /* Легке збільшення при наведенні */
+}
+
+/* Блок з текстом */
+.about-portal-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Опис */
+.about-portal-description {
+  font-size: 1.2rem; /* Збільшений розмір тексту */
+  font-weight: 300;
+  color: #ddd;
+  line-height: 1.8; /* Більший інтервал між рядками */
+  margin-bottom: 20px;
+}
+
+/* Посилання-кнопка */
+.about-portal-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00ffcc, #00cca0); /* Градієнтна кнопка */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-portal-link:hover {
+  background: linear-gradient(90deg, #00cca0, #009977);
+  box-shadow: 0px 6px 15px rgba(0, 255, 204, 0.5);
+  transform: translateY(-3px);
+}

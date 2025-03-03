@@ -1,8 +1,7 @@
-/* Основний стиль хедера */
 .header {
   align-items: center;
   display: flex;
-  background-color: #000000; /* Чорний фон */
+  background-color: #212121; /* Чорний фон */
   padding: 5px;
   position: sticky;
   top: 0;

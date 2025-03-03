@@ -1,19 +1,10 @@
 .advantages-section {
-  padding: 40px;
+  padding: 100px 40px;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: black;
   width: 100%;
   margin: 0 auto;
-  transition: background-color 0.3s ease;
-}
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  color: linear-gradient(90deg, #ffffff, #18ffff);
-  padding: 50px 0;
 }
 .advantages-list {
   list-style: none;
@@ -33,10 +24,6 @@
   overflow: hidden;
   text-align: center;
 }
-.advantage-item:hover {
-  transform: scale(1.1); /* Збільшення елемента */
-  border-color: #00f1f5; /* Зміна кольору рамки */
-}
 /* Стиль для контейнера кожного блоку переваг */
 .advantage-container {
   padding: 20px; /* Внутрішній відступ */
@@ -45,13 +32,6 @@
   border-radius: 15px; /* Закруглені кути */
   box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3); /* Легка бірюзова тінь */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація на ховер */
-}
-
-/* Ефект при наведенні */
-.advantage-container:hover {
-  transform: translateY(-10px); /* Легке підняття блока */
-  box-shadow: 0 6px 15px rgba(0, 255, 204, 0.5); /* Інтенсивніша тінь */
-  background-color: rgba(0, 0, 0, 0.85); /* Злегка темніший фон */
 }
 
 /* Стиль для заголовків */
