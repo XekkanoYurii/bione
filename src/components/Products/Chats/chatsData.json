@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "title": "1",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 2,
+    "title": "2",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 3,
+    "title": "3",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 4,
+    "title": "4",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 5,
+    "title": "5",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 6,
+    "title": "6",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 7,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 8,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 9,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 10,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інше"
+  },
+  {
+    "id": 11,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інше"
+  },
+  {
+    "id": 12,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 13,
+    "title": "",
+    "description": "ігри",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "ігри"
+  },
+  {
+    "id": 14,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "ігри"
+  },
+  {
+    "id": 15,
+    "title": "",
+    "description": "ігри",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 16,
+    "title": "",
+    "description": "АІ-агенти",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 17,
+    "title": "",
+    "description": "АІ-агенти",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "АІ-агенти"
+  },
+  {
+    "id": 18,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 19,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 20,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 21,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 22,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 23,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 24,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 25,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 26,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 27,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 28,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 29,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 30,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 31,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 32,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 33,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "фінанси"
+  },
+  {
+    "id": 34,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 35,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 36,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 37,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "інструменти"
+  },
+  {
+    "id": 38,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  },
+  {
+    "id": 39,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "ігри"
+  },
+  {
+    "id": 40,
+    "title": "",
+    "description": "",
+    "link": "",
+    "prompt1": "",
+    "prompt2": "",
+    "category": "освіта"
+  }
+]

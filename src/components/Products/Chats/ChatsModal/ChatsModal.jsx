@@ -1,8 +1,8 @@
-import styles from "./BubblesModal.module.css";
+import styles from "./ChatsModal.module.css";
 import { IoIosArrowUp } from "react-icons/io"; // Іконки стрілок (тепер вгору)
 import { FaExternalLinkAlt } from "react-icons/fa"; // Іконка для посилання
 
-const BubblesModal = ({ isOpen, content, onClose }) => {
+const ChatsModal = ({ isOpen, content, onClose }) => {
   if (!isOpen || !content) return null;
 
   return (
@@ -45,4 +45,4 @@ const BubblesModal = ({ isOpen, content, onClose }) => {
   );
 };
 
-export default BubblesModal;
+export default ChatsModal;

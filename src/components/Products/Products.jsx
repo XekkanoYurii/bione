@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import AboutProducts from "./AboutProducts/AboutProducts";
-import Bubbles from "./Bubbles/Bubbles";
+import Chats from "./Chats/Chats";
 import EducationHero from "./EducationHero/EducationHero";
 import BlockList from "./BlockList/BlockList";
 
@@ -28,7 +28,7 @@ function Products() {
               <>
                 <AboutProducts />
                 <div id="bubbles">
-                  <Bubbles />
+                  <Chats />
                 </div>
                 <div id="education">
                   <EducationHero />

@@ -6,12 +6,12 @@ import About from "./components/About/About";
 import Products from "./components/Products/Products";
 import Contacts from "./components/Contacts/Contacts";
 import ReportBugButton from "./components/ReportBugButton/ReportBugButton";
-import ScrollToTop from "./components/ScrollTop/ScrollToTop"; // Підключаємо
+import ScrollToTop from "./components/ScrollTop/ScrollToTop";
 
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Додаємо тут */}
+      <ScrollToTop />
       <Header />
       <ReportBugButton />
       <main>
